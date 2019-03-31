@@ -366,6 +366,10 @@
     <Compile Include="Assets\Script\Managers\SceneInfo.cs" />
     <Compile Include="Assets\Script\Pause_Menu.cs" />
     <Compile Include="Assets\Script\Player_Controller.cs" />
+    <Compile Include="Assets\Script\Test Scripts\CollisionDamage.cs" />
+    <Compile Include="Assets\Script\Test Scripts\DeathMenu.cs" />
+    <Compile Include="Assets\Script\Test Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Script\Test Scripts\ShowTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Cinemachine\ReleaseNotes.txt" />
