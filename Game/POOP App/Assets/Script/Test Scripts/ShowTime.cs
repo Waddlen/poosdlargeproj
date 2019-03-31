@@ -4,14 +4,21 @@ using UnityEngine.UI;
 
 public class ShowTime : MonoBehaviour
 {
-    public LevelManager LM;
 
     public Text timerText;
 
+    private float startTime;
+
+    void Start()
+    {
+        startTime = Time.time;
+    }
+
     void Update()
     {
-        string minutes = ((int)LM.time / 60).ToString();
-        string seconds = (LM.time % 60).ToString("f2");
+        float t = Time.time - startTime;
+        string minutes = ((int)t / 60).ToString();
+        string seconds = (t % 60).ToString("f2");
 
         timerText.text = minutes + ":" + seconds;
     }   
