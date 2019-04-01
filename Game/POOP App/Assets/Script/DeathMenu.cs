@@ -10,22 +10,23 @@ public class DeathMenu : MonoBehaviour
 
     public GameObject LM;
 
-    private LevelManager Level_Manager;
+    public GameObject UI;
 
-    public GameObject player;
-
-    private LevelManager Show_Time;
+	public GameObject Joystick;
 
     void Start()
     {
-        Level_Manager = LM.GetComponent<LevelManager>();
-        //Show_Time = player.GetComponent<ShowTime>();
         gameObject.SetActive(false);
     }
 
     public void ToggleEndMenu(int score,float time)
     {
         gameObject.SetActive(true);
+        UI.SetActive(false);
+		Joystick.SetActive(false);
+
+        Time.timeScale = 0f;
+        
         scoreText.text = score.ToString();
         timeText.text = time.ToString();
     }

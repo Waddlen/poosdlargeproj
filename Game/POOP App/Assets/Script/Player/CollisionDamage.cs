@@ -9,7 +9,9 @@ public class CollisionDamage : MonoBehaviour
     {
         if(col.gameObject.tag.Equals("Enemy"))
         {
-            LM.current_life --;
+            //Debug.Log("I hit something");
+            LM.GetComponent<LevelManager>().current_life --;
         }
+        //Debug.Log("touching stuff");
     }
 }
