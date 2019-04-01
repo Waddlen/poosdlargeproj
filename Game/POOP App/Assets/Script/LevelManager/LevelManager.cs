@@ -9,7 +9,7 @@ public class LevelManager : MonoBehaviour
 
     private bool isDead = false;
 
-    private int score = 0;
+    public int score = 0;
 
     public float time = 0;
 
@@ -32,7 +32,7 @@ public class LevelManager : MonoBehaviour
         //Show Death Screen
         if(isDead)
         {
-            DM.ToggleEndMenu(score,time);
+            DM.GetComponent<DeathMenu>().ToggleEndMenu(score,time);
         }
     }
 
@@ -48,5 +48,10 @@ public class LevelManager : MonoBehaviour
     {
         startTime = Time.time;
         current_life = lifePoints;
+    }
+
+    public void Damage()
+    {
+        current_life--;
     }
 }

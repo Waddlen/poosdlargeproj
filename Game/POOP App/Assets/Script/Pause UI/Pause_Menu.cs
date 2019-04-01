@@ -9,6 +9,8 @@ public class Pause_Menu : MonoBehaviour {
 	public GameObject pauseMenuUI;
 
 	public GameObject UI;
+
+	public GameObject Joystick;
 	
 	// Update is called once per frame
 	void Update ()
@@ -33,6 +35,7 @@ public class Pause_Menu : MonoBehaviour {
 		Time.timeScale = 1f;
 		GamePaused = false;
 		UI.SetActive(true);
+		Joystick.SetActive(true);
 	}
 
 	public void Pause()
@@ -41,5 +44,6 @@ public class Pause_Menu : MonoBehaviour {
 		Time.timeScale = 0f;
 		GamePaused = true;
 		UI.SetActive(false);
+		Joystick.SetActive(false);
 	}
 }
