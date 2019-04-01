@@ -9,6 +9,8 @@ public class ShowTime : MonoBehaviour
 
     private float startTime;
 
+    public string record;
+
     void Start()
     {
         startTime = Time.time;
@@ -20,6 +22,7 @@ public class ShowTime : MonoBehaviour
         string minutes = ((int)t / 60).ToString();
         string seconds = (t % 60).ToString("f2");
 
-        timerText.text = minutes + ":" + seconds;
+        record = minutes + ":" + seconds;
+        timerText.text = record;
     }   
 }
