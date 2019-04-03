@@ -54,3 +54,40 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+###
+# VS/MD solution and project files
+###
+[Ee]xportedObj/
+*.booproj
+*.csproj
+*.sln
+*.suo
+*.svd
+*.unityproj
+*.user
+*.userprefs
+*.pidb
+.DS_Store
+
+###
+# OS generated
+###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+Library/assetDatabase3
+Library/metadata/15/15ebf04de67923d41a36c21e1fc63718
+Library/metadata/72/72ece51f2901e7445ab60da3685d6b5f
+Library/metadata/8c/8ce9f797d0ee24676abee053fe021eed
+Library/metadata/a2/a243d9574cff945cf94ab63d68e3da0d
+Library/metadata/b5/b57d0317f1b3c4bbfa0c92b947ed7f47
+Library/metadata/b7/b7fdc9a45211442b0af3e210fd885c5b
+Library/metadata/f4/f4044717213e31446939f7bd49c896ea
+Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+Library/shadercompiler-UnityShaderCompiler.exe0.log
+
