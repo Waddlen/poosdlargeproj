@@ -7,21 +7,21 @@ public class LevelManager : MonoBehaviour
 
     public int current_life;
 
-    private bool isDead = false;
+    public bool isDead = false;
 
     public int score = 0;
 
-    public float time = 0;
-
-    private float startTime = 0;
+    public Transform startPoint;
 
     public Transform player;
 
     public DeathMenu DM;
 
+    public GameObject JS;
+
     private void Update()
     {
-        float time = Time.time - startTime;
+        //float time = Time.time - startTime;
 
         //Run out of life -> Dies
         if(current_life <= 0)
@@ -32,26 +32,29 @@ public class LevelManager : MonoBehaviour
         //Show Death Screen
         if(isDead)
         {
-            DM.GetComponent<DeathMenu>().ToggleEndMenu(score,time);
+            //Use this line if you are using a Death screen
+            //DM.GetComponent<DeathMenu>().ToggleEndMenu(score,time);
+            Reset();
+            
         }
-    }
-
-    void Reset()
-    {
-        current_life = lifePoints;
-        score = 0;
-        time = 0;
-        Start();
     }
     
     void Start()
     {
-        startTime = Time.time;
+        player.transform.position = startPoint.transform.position;
         current_life = lifePoints;
     }
 
     public void Damage()
     {
         current_life--;
+    }
+
+    private void Reset()
+    {
+        //player.position = startPoint;
+        current_life = lifePoints;
+        player.position = startPoint.transform.position;
+        isDead = false;
     }
 }
