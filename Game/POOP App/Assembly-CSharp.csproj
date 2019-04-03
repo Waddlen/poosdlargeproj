@@ -113,6 +113,7 @@
      <Compile Include="Assets\Script\LevelManager\LevelRestart.cs" />
      <Compile Include="Assets\Script\Managers\GameManager.cs" />
      <Compile Include="Assets\Script\Managers\SceneInfo.cs" />
+     <Compile Include="Assets\Script\Menus\LevelMenuControlScript.cs" />
      <Compile Include="Assets\Script\Menus\LevelMenuScript.cs" />
      <Compile Include="Assets\Script\Menus\MainMenuScript.cs" />
      <Compile Include="Assets\Script\Pause UI\Pause_Menu.cs" />

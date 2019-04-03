@@ -1,4 +1,13 @@
 sceneSetups:
-- path: Assets/Test Scene.unity
+- path: Assets/Scenes/Menu/Main Menu.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/Menu/LevelSelect.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Levels/Level1.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/Levels/Level2.unity
+  isLoaded: 0
+  isActive: 0

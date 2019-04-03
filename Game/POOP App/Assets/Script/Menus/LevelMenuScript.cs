@@ -12,6 +12,7 @@ public class LevelMenuScript : MonoBehaviour {
 	{
 		skin = Resources.Load("GUISkin") as GUISkin;
 	}
+	/* 
 	void OnGUI()
 	{
 		const int buttonWidth = 185;
@@ -37,4 +38,5 @@ public class LevelMenuScript : MonoBehaviour {
 		}
 		
 	}
+	*/
 }
