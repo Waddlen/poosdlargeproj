@@ -117,6 +117,7 @@
      <Compile Include="Assets\Script\Player\CollisionDamage.cs" />
      <Compile Include="Assets\Script\Player\ShowTime.cs" />
      <Compile Include="Assets\Script\Player_Controller.cs" />
+     <Compile Include="Assets\Script\Shadow Button\Shadow.cs" />
      <Compile Include="Assets\Script\UI\ShowHealth.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
