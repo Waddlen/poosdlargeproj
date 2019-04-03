@@ -7,6 +7,20 @@
 /[Bb]uilds/
 /[Ll]ogs/
 
+Library/*
+library/*
+Temp/*
+temp/*
+Obj/*
+obj/*
+build/*
+Build/*
+Builds/*
+builds/*
+Logs/*
+logs/*
+
+
 # Never ignore Asset meta data
 !/[Aa]ssets/**/*.meta
 
@@ -44,6 +58,7 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+*.meta
 
 # Unity3D generated file on crash reports
 sysinfo.txt
