@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212574019303777190}
   - component: {fileID: 50178842489721704}
   - component: {fileID: 61640644400778400}
+  - component: {fileID: 114164769434282416}
   m_Layer: 0
   m_Name: Shadow Player
   m_TagString: Untagged
@@ -195,6 +196,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
+--- !u!114 &114164769434282416
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1069194386630222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed57cdc164c19914698c4da07d11c152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LM: {fileID: 0}
 --- !u!114 &114436012935027388
 MonoBehaviour:
   m_ObjectHideFlags: 1

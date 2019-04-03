@@ -21,18 +21,27 @@ public class Shadow : MonoBehaviour {
 	public Transform shadow;
 
 	public GameObject shadowSprite;
+
+	public GameObject LM;
+
+	private LevelManager LMscript;
 	
 	//Mode 0 = Player, Mode 1 = Shadow
 	private int mode = 1;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+		LMscript = LM.GetComponent<LevelManager>();	
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+	{
+		if(LMscript.current_life <= 0)
+		{
+			Deactivate();
+		}
 	}
 
 	//Second Button to Switch target player while shadow mode is active
