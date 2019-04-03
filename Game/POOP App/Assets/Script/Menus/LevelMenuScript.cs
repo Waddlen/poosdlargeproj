@@ -33,7 +33,7 @@ public class LevelMenuScript : MonoBehaviour {
 
 		{
 			//On click, load level select.
-			SceneManager.LoadScene("Test Scene");
+			SceneManager.LoadScene("Level1");
 		}
 		
 	}
