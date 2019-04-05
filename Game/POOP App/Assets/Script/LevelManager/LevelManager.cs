@@ -19,6 +19,8 @@ public class LevelManager : MonoBehaviour
 
     public GameObject JS;
 
+    public GameObject Shadow;
+
     private void Update()
     {
         //float time = Time.time - startTime;
@@ -55,6 +57,7 @@ public class LevelManager : MonoBehaviour
         //player.position = startPoint;
         current_life = lifePoints;
         player.position = startPoint.transform.position;
+        Shadow.GetComponent<Shadow>().Deactivate();
         isDead = false;
     }
 }

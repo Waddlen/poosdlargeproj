@@ -300,6 +300,11 @@ Prefab:
       propertyPath: startPoint
       value: 
       objectReference: {fileID: 1390028623}
+    - target: {fileID: 114157774503230056, guid: ace4721a460963d46911df5b7fe188dc,
+        type: 2}
+      propertyPath: Shadow
+      value: 
+      objectReference: {fileID: 2001054166}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ace4721a460963d46911df5b7fe188dc, type: 2}
   m_IsPrefabAsset: 0
@@ -3524,6 +3529,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4560345710603946, guid: d78cc7671f9e840489fbf61564ca92cb,
     type: 2}
   m_PrefabInternal: {fileID: 993959565}
+--- !u!1 &2001054166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1262927746146808, guid: 78acdd9e9b9dc094aa6a091adb26a4d2,
+    type: 2}
+  m_PrefabInternal: {fileID: 398695099}
 --- !u!1 &2102283669
 GameObject:
   m_ObjectHideFlags: 0

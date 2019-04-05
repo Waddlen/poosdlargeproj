@@ -45,10 +45,7 @@ public class Shadow : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		if(LMscript.current_life <= 0)
-		{
-			Deactivate();
-		}
+		
 	}
 
 	//Second Button to Switch target player while shadow mode is active
@@ -99,7 +96,7 @@ public class Shadow : MonoBehaviour {
 		Swap.SetActive(true);
 	}
 
-	void Deactivate()
+	public void Deactivate()
 	{
 		mode = 0;
 		Active = false;
