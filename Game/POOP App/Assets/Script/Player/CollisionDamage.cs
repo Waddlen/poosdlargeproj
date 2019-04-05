@@ -7,11 +7,20 @@ public class CollisionDamage : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        //When Object collides with "Enemey" Object
         if(col.gameObject.tag.Equals("Enemy"))
         {
-            //Debug.Log("I hit something");
             LM.GetComponent<LevelManager>().current_life --;
         }
-        //Debug.Log("touching stuff");
+    }
+
+    void Start()
+    {
+        //Player won't collide with Shadow
+        Physics2D.IgnoreLayerCollision(8,9);
+        //Player won't collide with White Blocks
+        Physics2D.IgnoreLayerCollision(8,10);
+        //Shadow won't collide with Shadow Blocks
+        Physics2D.IgnoreLayerCollision(9,11);
     }
 }

@@ -282,6 +282,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114157774503230056, guid: ace4721a460963d46911df5b7fe188dc,
         type: 2}
+      propertyPath: startPoint
+      value: 
+      objectReference: {fileID: 1390028623}
+    - target: {fileID: 114157774503230056, guid: ace4721a460963d46911df5b7fe188dc,
+        type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1750495058}
@@ -295,11 +300,6 @@ Prefab:
       propertyPath: JS
       value: 
       objectReference: {fileID: 1321593306}
-    - target: {fileID: 114157774503230056, guid: ace4721a460963d46911df5b7fe188dc,
-        type: 2}
-      propertyPath: startPoint
-      value: 
-      objectReference: {fileID: 1390028623}
     - target: {fileID: 114157774503230056, guid: ace4721a460963d46911df5b7fe188dc,
         type: 2}
       propertyPath: Shadow
@@ -2391,7 +2391,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114164769434282416, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
+    - target: {fileID: 114993747376109860, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
         type: 2}
       propertyPath: LM
       value: 
@@ -2401,7 +2401,7 @@ Prefab:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 700539565}
-    - target: {fileID: 114993747376109860, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
+    - target: {fileID: 114164769434282416, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
         type: 2}
       propertyPath: LM
       value: 
