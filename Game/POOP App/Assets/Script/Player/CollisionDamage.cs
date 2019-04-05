@@ -13,6 +13,7 @@ public class CollisionDamage : MonoBehaviour
             LM.GetComponent<LevelManager>().current_life --;
         }
 
+        //When Shadow collides with White walls
         if(gameObject.tag.Equals("Shadow"))
         {
             if(col.gameObject.layer == 10)
