@@ -12,6 +12,14 @@ public class CollisionDamage : MonoBehaviour
         {
             LM.GetComponent<LevelManager>().current_life --;
         }
+
+        if(gameObject.tag.Equals("Shadow"))
+        {
+            if(col.gameObject.layer == 10)
+            {
+                LM.GetComponent<LevelManager>().current_life --;
+            }
+        }
     }
 
     void Start()
