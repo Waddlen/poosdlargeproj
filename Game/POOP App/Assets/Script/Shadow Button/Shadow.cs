@@ -3,6 +3,7 @@ using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shadow : MonoBehaviour {
 
@@ -21,6 +22,12 @@ public class Shadow : MonoBehaviour {
 	public Transform shadow;
 
 	public GameObject shadowSprite;
+
+	public GameObject Swap;
+
+	public Sprite SwapToWhite;
+
+	public Sprite SwapToShadow;
 
 	public GameObject LM;
 
@@ -54,10 +61,12 @@ public class Shadow : MonoBehaviour {
 				case 0:
 					mode = 1;
 					GiveControl(shadow, sCam, pCam);
+					Swap.GetComponent<Image>().sprite = SwapToWhite;
 					break;
 				case 1:
 					mode = 0;
 					GiveControl(player, pCam, sCam);
+					Swap.GetComponent<Image>().sprite = SwapToShadow;
 					break;
 			}
 
@@ -80,18 +89,24 @@ public class Shadow : MonoBehaviour {
 
 	void Activate()
 	{
+		mode = 1;
 		Active = true;
 		//Starts where player was
 		shadow.transform.position = player.transform.position;
 		shadowSprite.SetActive(true);
 		GiveControl(shadow, sCam, pCam);
+
+		Swap.SetActive(true);
 	}
 
 	void Deactivate()
 	{
+		mode = 0;
 		Active = false;
 		GiveControl(player, pCam, sCam);
 		shadowSprite.SetActive(false);
+
+		Swap.SetActive(false);
 	}
 
 	void GiveControl(Transform curPlayer, GameObject activeCam, GameObject nonCam)
