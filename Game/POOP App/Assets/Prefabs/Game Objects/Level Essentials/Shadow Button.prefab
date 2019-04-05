@@ -221,6 +221,9 @@ MonoBehaviour:
   player: {fileID: 0}
   shadow: {fileID: 0}
   shadowSprite: {fileID: 0}
+  Swap: {fileID: 0}
+  SwapToWhite: {fileID: 0}
+  SwapToShadow: {fileID: 0}
   LM: {fileID: 0}
 --- !u!114 &114863442252162958
 MonoBehaviour:
