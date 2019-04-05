@@ -31,5 +31,8 @@ public class CollisionDamage : MonoBehaviour
         Physics2D.IgnoreLayerCollision(8,10);
         //Shadow won't collide with Shadow Blocks
         Physics2D.IgnoreLayerCollision(9,11);
+
+        //Moveable objects don't block moving enemies
+        Physics2D.IgnoreLayerCollision(12,13);
     }
 }
