@@ -7,11 +7,12 @@ using UnityEngine.SceneManagement;
 public class LevelMenuControlScript : MonoBehaviour {
 	public Button level2, level3;
 	int levelPassed;
+    private GUISkin skin;
 
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
 		level2.interactable = false;
 		level3.interactable = false;
@@ -25,9 +26,38 @@ public class LevelMenuControlScript : MonoBehaviour {
 				level3.interactable = true;
 				break;
 		}
-	}
-	
-	public void levelToLoad(int level)
+        skin = Resources.Load("GUISkin") as GUISkin;
+    }
+
+
+
+    void OnGUI()
+    {
+        const int buttonWidth = 150;
+        const int buttonHeight = 50;
+        GUI.skin = skin;
+
+        if (
+            GUI.Button(
+
+            new Rect(
+            Screen.width / 6 - (buttonWidth / 2),
+            (20 * Screen.height / 100) - (buttonHeight / 2),
+            buttonWidth,
+            buttonHeight
+                ),
+                "Main Menu"
+                )
+              )
+
+        {
+            //On click, load level select.
+            SceneManager.LoadScene("Main Menu");
+        }
+    }
+
+
+    public void levelToLoad(int level)
 	{
 		SceneManager.LoadScene("level" + level);
 	}
@@ -40,8 +70,20 @@ public class LevelMenuControlScript : MonoBehaviour {
 	}
 
 
-	// Update is called once per frame
-//	void Update () {
-		
-//	}
+    // Update is called once per frame
+    void Update()
+    {
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            if (Input.GetKey(KeyCode.Escape))
+            {
+                // Insert Code Here (I.E. Load Scene, Etc)
+                // OR Application.Quit();
+
+                SceneManager.LoadScene("Main Menu");
+
+                return;
+            }
+        }
+    }
 }
