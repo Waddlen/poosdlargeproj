@@ -62,7 +62,7 @@ public class LevelMenuControlScript : MonoBehaviour {
 		SceneManager.LoadScene("level" + level);
 	}
 
-	public void resetPlayerPres()
+	public void ResetPlayerPres()
 	{
 		level2.interactable = false;
 		level3.interactable = false;
