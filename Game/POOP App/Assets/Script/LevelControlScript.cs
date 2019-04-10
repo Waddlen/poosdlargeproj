@@ -30,12 +30,13 @@ public class LevelControlScript : MonoBehaviour {
 	
 	public void youWin()
 	{
-		if(sceneIndex == 3)
+		if((sceneIndex -1) == 3)
 			Invoke("loadLevelSelect", 1f);
 		else {
-			if(levelPassed < sceneIndex)
-				PlayerPrefs.SetInt("LevelPassed", sceneIndex);
+			if((levelPassed -1) < (sceneIndex -1) )
+				PlayerPrefs.SetInt("LevelPassed", sceneIndex -1);
 			levelSign.gameObject.SetActive(false);
+			Invoke("loadNextLevel", 1f);
 		}
 	}
 /* 
@@ -48,11 +49,11 @@ public class LevelControlScript : MonoBehaviour {
 	*/
 	void loadNextLevel()
 	{
-		SceneManager.LoadScene(sceneIndex +1);
+		SceneManager.LoadScene(sceneIndex -1);
 	}
 
 	void loadLevelSelect()
 	{
-		SceneManager.LoadScene("LevelSelect");
+		SceneManager.LoadScene("Main Menu");
 	}
 }
