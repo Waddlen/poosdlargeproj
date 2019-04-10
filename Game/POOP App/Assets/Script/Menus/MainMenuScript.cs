@@ -14,8 +14,8 @@ public class MainMenuScript : MonoBehaviour {
 	}
 	void OnGUI()
 	{
-		const int buttonWidth = 250;
-		const int buttonHeight = 100;
+		const int buttonWidth = 150;
+		const int buttonHeight = 60;
 		GUI.skin = skin;
 
 		if(
