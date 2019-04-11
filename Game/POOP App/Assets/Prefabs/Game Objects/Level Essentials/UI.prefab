@@ -495,6 +495,10 @@ MonoBehaviour:
   SwapToWhite: {fileID: 21300000, guid: 9833c68b61e772d41af65fcce829a39f, type: 3}
   SwapToShadow: {fileID: 21300000, guid: 1412e71d34c0d8e479f01499f6d4a5de, type: 3}
   LM: {fileID: 0}
+  Duration: {fileID: 1611386424957394}
+  standardDR: 0.002
+  replenishRate: 0.005
+  DecayBoost: 0
 --- !u!114 &114368430750208404
 MonoBehaviour:
   m_ObjectHideFlags: 1

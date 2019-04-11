@@ -32,6 +32,23 @@ public class Shadow : MonoBehaviour {
 	public GameObject LM;
 
 	private LevelManager LMscript;
+
+	//These are for the shaodw decay mechanic. Recommended sDR is 0.002f
+	public GameObject Duration;
+
+	private float meter = 0;
+
+	private float meterMax = 1f;
+
+	public float standardDR = 0.002f;
+
+	public float replenishRate = 0.005f;
+
+	private float decayRate;
+
+	private float startDecay;
+
+	public int DecayBoost = 0;
 	
 	//Mode 0 = Player, Mode 1 = Shadow
 	private int mode = 1;
@@ -40,12 +57,29 @@ public class Shadow : MonoBehaviour {
 	void Start ()
 	{
 		LMscript = LM.GetComponent<LevelManager>();	
+		meter = meterMax;
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		
+		if(Active && meter > 0f)
+		{
+			//meter = ( meterMax - ( ( Time.time - startDecay ) * decayRate ) ) / meterMax;
+			meter -= decayRate;
+			Duration.GetComponent<Image>().fillAmount = meter;
+		}
+
+		if(!Active && meter < meterMax)
+		{
+			meter += replenishRate;
+			Duration.GetComponent<Image>().fillAmount = meter;
+		}
+
+		if(meter <= 0f)
+		{
+			Deactivate();
+		}
 	}
 
 	//Second Button to Switch target player while shadow mode is active
@@ -94,6 +128,7 @@ public class Shadow : MonoBehaviour {
 		GiveControl(shadow, sCam, pCam);
 
 		Swap.SetActive(true);
+		Decay();
 	}
 
 	public void Deactivate()
@@ -104,6 +139,29 @@ public class Shadow : MonoBehaviour {
 		shadowSprite.SetActive(false);
 
 		Swap.SetActive(false);
+	}
+
+	public void Decay()
+	{
+		/*
+		if(meter <= 0f)
+		{
+			yield break;
+		}
+		*/
+		startDecay = Time.time;
+
+		decayRate = standardDR;
+
+		if(DecayBoost > 0)
+		{
+			decayRate += DecayBoost;
+		}
+		/*
+		meter -= decayRate;
+		Duration.GetComponent<Image>().fillAmount = meter;
+		yield return new WaitForSeconds(.2f);
+		*/
 	}
 
 	void GiveControl(Transform curPlayer, GameObject activeCam, GameObject nonCam)
