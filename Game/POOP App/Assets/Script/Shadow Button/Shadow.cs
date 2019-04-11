@@ -13,6 +13,10 @@ public class Shadow : MonoBehaviour {
 
 	public Joystick JS;
 
+	public FixedJoystick FJS;
+
+	public bool FixedJS;
+
 	public GameObject pCam;
 
 	public GameObject sCam;
@@ -166,7 +170,14 @@ public class Shadow : MonoBehaviour {
 
 	void GiveControl(Transform curPlayer, GameObject activeCam, GameObject nonCam)
 	{
-		JS.GetComponent<Joystick>().player = curPlayer;
+		if(FixedJS)
+		{
+			FJS.GetComponent<FixedJoystick>().player = curPlayer;
+		}
+		else
+		{
+			JS.GetComponent<Joystick>().player = curPlayer;
+		}
 		activeCam.SetActive(true);
 		nonCam.SetActive(false);
 	}
