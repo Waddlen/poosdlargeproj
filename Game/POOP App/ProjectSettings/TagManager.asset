@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Shadow
+  - ShadowSpot
   layers:
   - Default
   - TransparentFX
@@ -42,6 +43,9 @@ TagManager:
   m_SortingLayers:
   - name: Background
     uniqueID: 869141419
+    locked: 0
+  - name: Ground Obstacles
+    uniqueID: 1982672755
     locked: 0
   - name: Obstacles
     uniqueID: 2193474137
