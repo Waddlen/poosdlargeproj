@@ -30,7 +30,7 @@ public class ButtonControl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
-    {
+  {
 		if(col.gameObject.tag.Equals(trigger))
         {
 			Active = true;

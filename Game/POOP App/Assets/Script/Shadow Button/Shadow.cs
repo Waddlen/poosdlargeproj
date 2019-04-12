@@ -48,11 +48,13 @@ public class Shadow : MonoBehaviour {
 
 	public float replenishRate = 0.005f;
 
+	public bool DecayBoost = false;
+
 	private float decayRate;
 
 	private float startDecay;
 
-	public int DecayBoost = 0;
+	//public int DecayBoost = 0;
 	
 	//Mode 0 = Player, Mode 1 = Shadow
 	private int mode = 1;
@@ -69,7 +71,10 @@ public class Shadow : MonoBehaviour {
 	{
 		if(Active && meter > 0f)
 		{
-			//meter = ( meterMax - ( ( Time.time - startDecay ) * decayRate ) ) / meterMax;
+			if(DecayBoost)
+			{
+				meter -= .003f;
+			}
 			meter -= decayRate;
 			Duration.GetComponent<Image>().fillAmount = meter;
 		}
@@ -143,29 +148,15 @@ public class Shadow : MonoBehaviour {
 		shadowSprite.SetActive(false);
 
 		Swap.SetActive(false);
+		DecayBoost = false;
+		shadow.transform.position = player.transform.position;
 	}
 
 	public void Decay()
 	{
-		/*
-		if(meter <= 0f)
-		{
-			yield break;
-		}
-		*/
 		startDecay = Time.time;
 
 		decayRate = standardDR;
-
-		if(DecayBoost > 0)
-		{
-			decayRate += DecayBoost;
-		}
-		/*
-		meter -= decayRate;
-		Duration.GetComponent<Image>().fillAmount = meter;
-		yield return new WaitForSeconds(.2f);
-		*/
 	}
 
 	void GiveControl(Transform curPlayer, GameObject activeCam, GameObject nonCam)
