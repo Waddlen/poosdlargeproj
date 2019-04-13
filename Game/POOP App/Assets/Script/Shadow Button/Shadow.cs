@@ -64,6 +64,7 @@ public class Shadow : MonoBehaviour {
 	{
 		LMscript = LM.GetComponent<LevelManager>();	
 		meter = meterMax;
+		shadowSprite.SetActive(false);
 	}
 	
 	// Update is called once per frame
