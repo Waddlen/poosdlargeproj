@@ -1717,6 +1717,53 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1893982453285328, guid: 95d39cf48e7aff548b8c041c1b3bc1d8,
     type: 2}
   m_PrefabInternal: {fileID: 897912929}
+--- !u!1001 &558457435
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4980349243328070, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 114397720265459570, guid: 31985d625e87a574a8899b71fbbf4cf9,
+        type: 2}
+      propertyPath: LM
+      value: 
+      objectReference: {fileID: 958195106}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31985d625e87a574a8899b71fbbf4cf9, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &607205362
 GameObject:
   m_ObjectHideFlags: 0
@@ -2010,7 +2057,7 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114574714404238224, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
+    - target: {fileID: 114102418051625750, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
         type: 2}
       propertyPath: LM
       value: 
@@ -2020,7 +2067,7 @@ Prefab:
       propertyPath: timerText
       value: 
       objectReference: {fileID: 700539565}
-    - target: {fileID: 114102418051625750, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
+    - target: {fileID: 114574714404238224, guid: 9b02c2ba2b2f5a84d8c9726bbe7b5010,
         type: 2}
       propertyPath: LM
       value: 

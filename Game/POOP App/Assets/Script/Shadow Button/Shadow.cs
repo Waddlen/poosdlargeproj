@@ -145,11 +145,11 @@ public class Shadow : MonoBehaviour {
 		mode = 0;
 		Active = false;
 		GiveControl(player, pCam, sCam);
+		shadow.transform.position = player.transform.position;
 		shadowSprite.SetActive(false);
 
 		Swap.SetActive(false);
 		DecayBoost = false;
-		shadow.transform.position = player.transform.position;
 	}
 
 	public void Decay()
