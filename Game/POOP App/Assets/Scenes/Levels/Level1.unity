@@ -1672,6 +1672,11 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114138305120886998, guid: 78acdd9e9b9dc094aa6a091adb26a4d2,
+        type: 2}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1750495058}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78acdd9e9b9dc094aa6a091adb26a4d2, type: 2}
   m_IsPrefabAsset: 0
@@ -3553,8 +3558,38 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 125363539}
+    - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Quit
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
       objectReference: {fileID: 11500000, guid: 38f949f9590a7b5458214a7fb2b0d5f5,
         type: 3}
+    - target: {fileID: 114559440628334020, guid: be86164db82421e43a6b35c465d2cdf8,
+        type: 2}
+      propertyPath: Quit
+      value: 
+      objectReference: {fileID: 2098801990}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be86164db82421e43a6b35c465d2cdf8, type: 2}
   m_IsPrefabAsset: 0
@@ -3852,3 +3887,8 @@ Prefab:
     - {fileID: 114972565867376344, guid: c238b4d7d9babc745b4b9f37156067c5, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: c238b4d7d9babc745b4b9f37156067c5, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &2098801990 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1953069323404418, guid: be86164db82421e43a6b35c465d2cdf8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1716130015}

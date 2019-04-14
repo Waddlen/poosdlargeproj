@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause_Menu : MonoBehaviour {
 
@@ -11,6 +12,8 @@ public class Pause_Menu : MonoBehaviour {
 	public GameObject UI;
 
 	public GameObject Joystick;
+
+	
 	
 	// Update is called once per frame
 	void Update ()
@@ -45,5 +48,10 @@ public class Pause_Menu : MonoBehaviour {
 		GamePaused = true;
 		UI.SetActive(false);
 		Joystick.SetActive(false);
+	}
+
+	public void Quit()
+	{
+		SceneManager.LoadScene("Main Menu");
 	}
 }
