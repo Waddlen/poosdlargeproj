@@ -21,6 +21,8 @@ public class KillBlock : MonoBehaviour {
 
     private int direction = 1;
 
+	public GameObject LM;
+
 	Rigidbody2D myBody;
 	Vector3 Dest;
 
@@ -181,4 +183,11 @@ public class KillBlock : MonoBehaviour {
 			}
 		}
 	}
+	void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.gameObject.tag.Equals("Player") || col.gameObject.tag.Equals("Shadow"))
+		{
+			LM.GetComponent<LevelManager>().current_life --;
+		}
+    }
 }

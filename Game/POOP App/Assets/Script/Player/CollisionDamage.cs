@@ -12,7 +12,7 @@ public class CollisionDamage : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         //When Object collides with "Enemey" Object
-        if(col.gameObject.tag.Equals("Enemy"))
+        if(col.gameObject.tag.Equals("Enemy") || col.gameObject.tag.Equals("Enemy Bullet"))
         {
             LM.GetComponent<LevelManager>().current_life --;
         }

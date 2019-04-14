@@ -9,15 +9,13 @@ public class LevelManager : MonoBehaviour
 
     public bool isDead = false;
 
-    public int score = 0;
+    //public int score = 0;
 
     public Transform startPoint;
 
     public Transform player;
 
-    public DeathMenu DM;
-
-    public GameObject JS;
+    //public DeathMenu DM;
 
     public GameObject Shadow;
 
@@ -37,7 +35,6 @@ public class LevelManager : MonoBehaviour
             //Use this line if you are using a Death screen
             //DM.GetComponent<DeathMenu>().ToggleEndMenu(score,time);
             Reset();
-            
         }
     }
     
@@ -59,5 +56,15 @@ public class LevelManager : MonoBehaviour
         player.position = startPoint.transform.position;
         Shadow.GetComponent<Shadow>().Deactivate();
         isDead = false;
+
+        //Destroy bullets
+        GameObject[] bullets = GameObject.FindGameObjectsWithTag("Enemy Bullet");
+        if(bullets != null)
+        {
+            foreach(GameObject bullet in bullets)
+            {
+                Destroy(bullet);
+            }
+        }
     }
 }
