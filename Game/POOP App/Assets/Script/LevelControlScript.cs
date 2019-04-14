@@ -40,11 +40,12 @@ public class LevelControlScript : MonoBehaviour {
 		}
 	}
 /* 
-	public void youLose()
+	public void levelToLoad()
 	{
 		levelSign.gameObject.SetActive(false);
 		gameOverText.gameObject.SetActive(true);
 		Invoke("loadMainMenu", 1f);
+		SceneManager.LoadScene("MainMenu");
 	}
 	*/
 	void loadNextLevel()
@@ -56,4 +57,5 @@ public class LevelControlScript : MonoBehaviour {
 	{
 		SceneManager.LoadScene("Main Menu");
 	}
+
 }
