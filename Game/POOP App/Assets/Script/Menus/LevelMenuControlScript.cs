@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelMenuControlScript : MonoBehaviour {
 	public Button level2, level3;
 	int levelPassed;
-    private GUISkin skin;
+    //private GUISkin skin;
 
 
 
@@ -26,11 +26,11 @@ public class LevelMenuControlScript : MonoBehaviour {
 				level3.interactable = true;
 				break;
 		}
-        skin = Resources.Load("GUISkin") as GUISkin;
+        ///skin = Resources.Load("GUISkin") as GUISkin;
     }
 
 
-
+/* 
     void OnGUI()
     {
         const int buttonWidth = 150;
@@ -55,21 +55,21 @@ public class LevelMenuControlScript : MonoBehaviour {
             SceneManager.LoadScene("Main Menu");
         }
     }
-
+*/
 
     public void levelToLoad(int level)
 	{
 		SceneManager.LoadScene("level" + level);
 	}
 
-	public void ResetPlayerPres()
+	public void resetPlayerPres()
 	{
 		level2.interactable = false;
 		level3.interactable = false;
 		PlayerPrefs.DeleteAll();
 	}
 
-
+/* 
     // Update is called once per frame
     void Update()
     {
@@ -86,4 +86,5 @@ public class LevelMenuControlScript : MonoBehaviour {
             }
         }
     }
+    */
 }
