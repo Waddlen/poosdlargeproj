@@ -54,6 +54,7 @@ public class LevelManager : MonoBehaviour
         //player.position = startPoint;
         current_life = lifePoints;
         player.position = startPoint.transform.position;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         Shadow.GetComponent<Shadow>().Deactivate();
         isDead = false;
 
