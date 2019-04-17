@@ -12,7 +12,7 @@
 	}
 	else
 	{
-		$sql = "INSERT INTO leaderboard (score_id,device_id,level_id,score,time) VALUES ('0','" . $device_id . "','" . $level_id . "','" . $time . "','" . $score . "')";
+		$sql = "INSERT INTO leaderboard (score_id,device_id,level_id,score,time) VALUES (DEFAULT,'" . $device_id . "','" . $level_id . "','" . $time . "','" . $score . "')";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
@@ -21,7 +21,7 @@
 		{
 			$new_score_id = $conn->insert_id;
 			$conn->close();
-			$message = '{"error":"", "Contactid":"' . $new_score_id . '"}';
+			$message = '{"error":"", "score_id":"' . $new_score_id . '"}';
 			sendResultInfoAsJson($message);
 		}
 	}
