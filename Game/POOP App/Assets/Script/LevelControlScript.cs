@@ -28,13 +28,14 @@ public class LevelControlScript : MonoBehaviour {
 	
 	public void youWin()
 	{
-		if((sceneIndex -1) == 3)
-			Invoke("loadLevelSelect", 1f);
-		else {
+		if((sceneIndex -1) != 3)
+		{
+			//Invoke("loadLevelSelect", 1f);
+		//else {
 			if((levelPassed -1) < (sceneIndex -1) )
 				PlayerPrefs.SetInt("LevelPassed", sceneIndex -1);
 			levelSign.gameObject.SetActive(false);
-			Invoke("loadNextLevel", 1f);
+			//Invoke("loadNextLevel", 1f);
 		}
 	}
 /* 
