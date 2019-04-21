@@ -1660,7 +1660,7 @@ Prefab:
     - target: {fileID: 224347213265582336, guid: 78acdd9e9b9dc094aa6a091adb26a4d2,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 224347213265582336, guid: 78acdd9e9b9dc094aa6a091adb26a4d2,
         type: 2}
@@ -2020,7 +2020,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &700539565 stripped
 MonoBehaviour:
@@ -2116,7 +2116,7 @@ RectTransform:
   m_Children:
   - {fileID: 607205363}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2333,12 +2333,47 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Restart
       objectReference: {fileID: 0}
+    - target: {fileID: 114861339316734364, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: record
+      value: 
+      objectReference: {fileID: 700539565}
+    - target: {fileID: 114944066692220380, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1831783196}
+    - target: {fileID: 114944066692220380, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadNextLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 114972016573068286, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1831783196}
+    - target: {fileID: 114972016573068286, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: loadLevelSelect
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785374020791390, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 958195109}
+    - target: {fileID: 114785374020791390, guid: 2ee12f3376ad36248909365ce2e1a79a,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ee12f3376ad36248909365ce2e1a79a, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1 &894929352 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 1992386714427264, guid: 2ee12f3376ad36248909365ce2e1a79a,
+  m_CorrespondingSourceObject: {fileID: 1122253138628876, guid: 2ee12f3376ad36248909365ce2e1a79a,
     type: 2}
   m_PrefabInternal: {fileID: 894929351}
 --- !u!1001 &897912929
@@ -2690,7 +2725,7 @@ Transform:
   m_Children:
   - {fileID: 219151931}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!210 &1249999957
 SortingGroup:
@@ -2981,12 +3016,11 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 114559440628334020, guid: be86164db82421e43a6b35c465d2cdf8,
-        type: 2}
+      objectReference: {fileID: 1831783196}
     - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Quit
+      value: loadLevelSelect
       objectReference: {fileID: 0}
     - target: {fileID: 114259522138369334, guid: be86164db82421e43a6b35c465d2cdf8,
         type: 2}

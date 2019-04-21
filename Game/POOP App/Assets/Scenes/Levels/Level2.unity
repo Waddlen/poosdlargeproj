@@ -345,6 +345,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114047539499165832, guid: 837d7c38a33034c48b6eb930029f88e5,
+        type: 2}
+      propertyPath: WinUI
+      value: 
+      objectReference: {fileID: 606162351}
+    - target: {fileID: 114047539499165832, guid: 837d7c38a33034c48b6eb930029f88e5,
+        type: 2}
+      propertyPath: UI
+      value: 
+      objectReference: {fileID: 801801079}
     m_RemovedComponents:
     - {fileID: 114464894422150790, guid: 837d7c38a33034c48b6eb930029f88e5, type: 2}
     - {fileID: 114356900451984294, guid: 837d7c38a33034c48b6eb930029f88e5, type: 2}
@@ -2155,6 +2165,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1893982453285328, guid: 95d39cf48e7aff548b8c041c1b3bc1d8,
     type: 2}
   m_PrefabInternal: {fileID: 897912929}
+--- !u!1 &606162351 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1122253138628876, guid: 2ee12f3376ad36248909365ce2e1a79a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1189531817}
 --- !u!1 &607205362
 GameObject:
   m_ObjectHideFlags: 0
