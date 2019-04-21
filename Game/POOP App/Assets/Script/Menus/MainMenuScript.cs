@@ -7,11 +7,13 @@ public class MainMenuScript : MonoBehaviour {
 
 	// Use this for initialization
 	private GUISkin skin;
+	
 
-	void Start()
-	{
+	void Start(){
 		skin = Resources.Load("GUISkin") as GUISkin;
 	}
+
+	
 	void OnGUI()
 	{
 		const int buttonWidth = 150;
@@ -71,12 +73,13 @@ public class MainMenuScript : MonoBehaviour {
 				{
 			//On click, load level select.
 			SceneManager.LoadScene("Leaderboard");
-		}
+		} 
 
 	}
 
     void Update()
     {
+			
         if (Application.platform == RuntimePlatform.Android)
         {
             if (Input.GetKey(KeyCode.Escape))
@@ -89,5 +92,18 @@ public class MainMenuScript : MonoBehaviour {
                 return;
             }
         }
+				
     }
+
+	public void MenuButton1()
+	{
+		SceneManager.LoadScene("LevelSelect");
+	}
+
+	public void MenuButton2()
+	{
+		SceneManager.LoadScene("Main Menu");
+	}
+
+
 }
