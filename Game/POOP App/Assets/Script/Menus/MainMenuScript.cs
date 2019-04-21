@@ -13,7 +13,7 @@ public class MainMenuScript : MonoBehaviour {
 		skin = Resources.Load("GUISkin") as GUISkin;
 	}
 
-	
+	/* 
 	void OnGUI()
 	{
 		const int buttonWidth = 150;
@@ -74,9 +74,9 @@ public class MainMenuScript : MonoBehaviour {
 			//On click, load level select.
 			SceneManager.LoadScene("Leaderboard");
 		} 
-
+			
 	}
-
+	*/
     void Update()
     {
 			
@@ -102,7 +102,7 @@ public class MainMenuScript : MonoBehaviour {
 
 	public void MenuButton2()
 	{
-		SceneManager.LoadScene("Main Menu");
+		SceneManager.LoadScene("Options");
 	}
 
 
