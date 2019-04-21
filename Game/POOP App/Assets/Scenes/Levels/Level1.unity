@@ -160,7 +160,7 @@ Prefab:
     - target: {fileID: 114923493265176228, guid: ca47d8bf9e2e8854988b0d629c19cf14,
         type: 2}
       propertyPath: ShadowTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114923493265176228, guid: ca47d8bf9e2e8854988b0d629c19cf14,
         type: 2}
@@ -1530,7 +1530,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4397640432254004, guid: d78cc7671f9e840489fbf61564ca92cb, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.4599991
+      value: 1.4599996
       objectReference: {fileID: 0}
     - target: {fileID: 4397640432254004, guid: d78cc7671f9e840489fbf61564ca92cb, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2392,7 +2392,7 @@ Prefab:
       objectReference: {fileID: 1750495058}
     - target: {fileID: 4685644355778600, guid: 95d39cf48e7aff548b8c041c1b3bc1d8, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.00000047683716
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95d39cf48e7aff548b8c041c1b3bc1d8, type: 2}
