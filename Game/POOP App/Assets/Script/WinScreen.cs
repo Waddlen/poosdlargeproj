@@ -12,7 +12,7 @@ public class WinScreen : MonoBehaviour {
 
 	public GameObject Popup;
 
-	string url = /* need url */;
+	string url = /* need url */"something";
 
 	void Start ()
 	{
