@@ -12,7 +12,7 @@ public class HitFinishLine : MonoBehaviour
 		if(hitObj.tag == "Player")
 		{
 			//transform.parent.gameObject.AddComponent<GameOverScript>();
-			//LevelControlScript.instance.youWin();
+			LevelControlScript.instance.youWin();
 			Finish();
 		}
 	}
