@@ -2,14 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
 
 public class WinScreen : MonoBehaviour {
 
-	//private string record;
-
 	public Text record;
 
+	public InputField Input;
+
 	public GameObject Popup;
+
+	string url = /* need url */;
+
 	void Start ()
 	{
 		//GameObject.FindGameObjectWithTag("Player").GetComponent<ShowTime>().record = record;
@@ -31,7 +35,29 @@ public class WinScreen : MonoBehaviour {
 
 	public void Submit()
 	{
-		//Push time to website
+		if(string.IsNullOrEmpty(Input.text) == false)
+		{
+			pkg data = new pkg
+			{
+				name = Input.text,
+				winTime = record.text
+			};
+
+			string json = JsonUtility.ToJson(data);
+
+			File.WriteAllText(Application.dataPath + "/score.txt", json);
+
+			WWWForm form = new WWWForm();
+			form.AddField("x",json);
+			WWW send = new WWW (url,form);
+			Close();
+		}
+	}
+
+	private class pkg
+	{
+		public string name;
+		public string winTime;
 	}
 
 	public void Close()
