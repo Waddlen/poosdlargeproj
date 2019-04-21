@@ -11,7 +11,7 @@ public class Pause_Menu : MonoBehaviour {
 
 	public GameObject UI;
 
-	public GameObject Joystick;
+	//public GameObject Joystick;
 
 	
 	
@@ -38,7 +38,7 @@ public class Pause_Menu : MonoBehaviour {
 		Time.timeScale = 1f;
 		GamePaused = false;
 		UI.SetActive(true);
-		Joystick.SetActive(true);
+		//Joystick.SetActive(true);
 	}
 
 	public void Pause()
@@ -47,7 +47,7 @@ public class Pause_Menu : MonoBehaviour {
 		Time.timeScale = 0f;
 		GamePaused = true;
 		UI.SetActive(false);
-		Joystick.SetActive(false);
+		//Joystick.SetActive(false);
 	}
 
 	public void Quit()

@@ -351,6 +351,7 @@ GameObject:
   - component: {fileID: 223512226730859738}
   - component: {fileID: 114819140536446404}
   - component: {fileID: 114557880935221572}
+  - component: {fileID: 114013752076890510}
   m_Layer: 0
   m_Name: Win UI
   m_TagString: Untagged
@@ -358,6 +359,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114013752076890510
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1992386714427264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c502b6d8bf8ae54daa03ac96b88d9d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Popup: {fileID: 1107080710892866}
 --- !u!114 &114059534847282694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1140,7 +1153,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Your New Best Time is:'
+  m_Text: 'Submit your new time:'
 --- !u!114 &114892441358146938
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1236,12 +1249,12 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
