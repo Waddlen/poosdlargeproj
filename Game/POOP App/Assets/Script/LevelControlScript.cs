@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelControlScript : MonoBehaviour {
 
 	public static LevelControlScript instance = null;
-	GameObject levelSign, youWinText;
+	GameObject levelSign;
 	int sceneIndex, levelPassed;
 
 	// Use this for initialization
@@ -20,9 +20,7 @@ public class LevelControlScript : MonoBehaviour {
 
 		levelSign = GameObject.Find("LevelNumber");
 		//gameOverText = GameObject.Find("GameOverText");
-		youWinText = GameObject.Find("YouWinText");
 		//gameOverText.gameObject.SetActive(false);
-		youWinText.gameObject.SetActive(false);
 
 		sceneIndex = SceneManager.GetActiveScene().buildIndex;
 		levelPassed = PlayerPrefs.GetInt("LevelPassed");
@@ -48,12 +46,12 @@ public class LevelControlScript : MonoBehaviour {
 		SceneManager.LoadScene("MainMenu");
 	}
 	*/
-	void loadNextLevel()
+	 public void loadNextLevel()
 	{
-		SceneManager.LoadScene(sceneIndex -1);
+		SceneManager.LoadScene(sceneIndex + 1);
 	}
 
-	void loadLevelSelect()
+	public void loadLevelSelect()
 	{
 		SceneManager.LoadScene("Main Menu");
 	}

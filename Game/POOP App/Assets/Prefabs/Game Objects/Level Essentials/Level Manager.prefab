@@ -55,11 +55,8 @@ MonoBehaviour:
   lifePoints: 1
   current_life: 1
   isDead: 0
-  score: 0
   startPoint: {fileID: 0}
   player: {fileID: 0}
-  DM: {fileID: 0}
-  JS: {fileID: 0}
   Shadow: {fileID: 0}
 --- !u!114 &114280292487061900
 MonoBehaviour:

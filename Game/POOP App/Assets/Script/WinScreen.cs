@@ -1,32 +1,41 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WinScreen : MonoBehaviour {
 
-	private string record;
+	//private string record;
 
-	private float StartTime;
-
-	private bool Open = false;
+	public Text record;
 
 	public GameObject Popup;
 	void Start ()
 	{
-		GameObject.FindGameObjectWithTag("Player").GetComponent<ShowTime>().record = record;
-		StartTime = Time.deltaTime + 1.5f;
+		//GameObject.FindGameObjectWithTag("Player").GetComponent<ShowTime>().record = record;
+		Popup.SetActive(true);
+
+
+		GameObject[] Timers = GameObject.FindGameObjectsWithTag("Timer");
+		foreach(GameObject t in Timers)
+		{
+			t.GetComponent<Text>().text = record.text;
+		}
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-		if(!Open)
-		{
-			if(Time.deltaTime >= StartTime)
-			{
-				Open = true;
-				Popup.SetActive(true);
-			}
-		}	
+		
+	}
+
+	public void Submit()
+	{
+		//Push time to website
+	}
+
+	public void Close()
+	{
+		Popup.SetActive(false);
 	}
 }
