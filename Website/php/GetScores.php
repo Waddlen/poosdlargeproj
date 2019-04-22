@@ -3,15 +3,15 @@
 	$searchResults = "";
 	$searchCount = 0;
 	$search = $_POST['Search'];
-    $error = "";
+    	$error = "";
 
-    //update these as appropriate?
-    $localhost = "poosdlarge.ckbkojoxq1y0.us-east-1.rds.amazonaws.com";
-    $my_user = "poosdadmin";
-    $my_password = "DontForgetThis321";
+    	//update these as appropriate?
+    	$localhost = "poosdlarge.ckbkojoxq1y0.us-east-1.rds.amazonaws.com";
+    	$my_user = "poosdadmin";
+    	$my_password = "DontForgetThis321";
 	$my_db = "poosdlarge";
 
-    $conn = new mysqli($localhost, $my_user, $my_password, $my_db);
+    	$conn = new mysqli($localhost, $my_user, $my_password, $my_db);
 	if ($conn->connect_error)
 	{
 		returnWithError( $conn->connect_error );
@@ -19,7 +19,6 @@
 	else
 	{
 		//$sql = "SELECT ContactName from Contact where ContactName like '%" . $search . "%'";
-		$search = '%' . $search . '%';
 		$sql = "SELECT * FROM leaderboard WHERE level_id=$search";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0)
@@ -33,22 +32,22 @@
 	
 				//level_id device_id nickname time
 				$searchCount++;
-                $Device_ID = $row["device_id"];
-                $sql2 = "SELECT * FROM usernames WHERE device_id=$Device_ID";
-                $result2 = $conn->query($sql2);
+                		$Device_ID = $row["device_id"];
+                		$sql2 = "SELECT * FROM usernames WHERE device_id=$Device_ID";
+                		$result2 = $conn->query($sql2);
 
-                if ($result2->num_rows > 0) 
-                {
-                    $row2 = $result2->fetch_assoc();
-                    $Nickname = $row2["nickname"];
-                    $Time = $row["time"];
-                    $searchResults .= '{"Nickname":"' . $Nickname . '","Time":"' . $Time . '","error":""}';
-                    //$searchResults .= '"' . $row["Name"] . '"';
-                }
-                else
-                {
-                    returnWithError( "No Records Found (device_id)" );
-                }
+                		if ($result2->num_rows > 0) 
+                		{
+                    			$row2 = $result2->fetch_assoc();
+                    			$Nickname = $row2["nickname"];
+                    			$Time = $row["time"];
+                    			$searchResults .= '{"Nickname":"' . $Nickname . '","Time":"' . $Time . '","error":""}';
+                    			//$searchResults .= '"' . $row["Name"] . '"';
+                		}
+                		else
+                		{
+                    			returnWithError( "No Records Found (device_id)" );
+                		}
 			}
 			returnWithInfo( $searchResults );
 		}
