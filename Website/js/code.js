@@ -50,22 +50,33 @@ function getPosts()
                     var newScore = table.createTHead();
                     var newScoreInfo = newScore.insertRow(0);
                     newContactInfo.scope = "row";
-                    newContactIndo.insertCell(0).outerHTML = '<th scope="col">No matching contacts found</th>';
+                    newContactInfo.insertCell(0).outerHTML = '<th scope="col">No matching contacts found</th>';
                 }
-                for (var i = 0; i < jsonObject.results.length; i++)
-                {
-                    var jsonObjectTwo = jsonObject.results[i];
-                    var error = jsonObjectTwo.error;
-                    if (error == "")
-                    {
+                else {
+                        
                         var newScore = table.createTHead();
                         var newScoreInfo = newScore.insertRow(0);
-                        newScoreInfo.scope = "row";
-                        newScoreInfo.value = "1";
-                        newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+(jsonObject.results.length-i)+"</th>";
-                        newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+jsonObjectTwo.Nickname+"</th>";
-                        newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+jsonObjectTwo.Time+"</th>";
-                    }
+                        newScoreInfo.scope="row";
+                        newScoreInfo.value="1";
+                        newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+"#"+"</th>";
+                        newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+"Nickname"+</th>";
+                        newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+"Score"+</th>";
+                        
+                        for (var i = 0; i < jsonObject.results.length; i++)
+                        {
+                            var jsonObjectTwo = jsonObject.results[i];
+                            var error = jsonObjectTwo.error;
+                            if (error == "")
+                            {
+                                newScore = table.createTHead();
+                                newScoreInfo = newScore.insertRow(0);
+                                newScoreInfo.scope = "row";
+//                                 newScoreInfo.value = "1";
+                                newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+(jsonObject.results.length-i)+"</th>";
+                                newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+jsonObjectTwo.Nickname+"</th>";
+                                newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+jsonObjectTwo.Time+"</th>";
+                            }
+                        }
                 }
                 table.classList.add('table-style');
             }
