@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 114011671233851192}
   - component: {fileID: 114366376294932130}
   - component: {fileID: 114861339316734364}
+  - component: {fileID: 114746930275577300}
   m_Layer: 0
   m_Name: Win UI
   m_TagString: Untagged
@@ -962,6 +963,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114746930275577300
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1122253138628876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b306f7399a3d64863b0655bac7a06314, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sendRequest: 0
 --- !u!114 &114759583779967000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1053,8 +1066,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   record: {fileID: 0}
-  Input: {fileID: 0}
+  Input: {fileID: 114438673391303000}
   Popup: {fileID: 1415201041413694}
+  iName: 
 --- !u!114 &114861641096658910
 MonoBehaviour:
   m_ObjectHideFlags: 1

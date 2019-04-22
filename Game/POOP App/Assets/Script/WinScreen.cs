@@ -13,6 +13,8 @@ public class WinScreen : MonoBehaviour {
 
 	public GameObject Popup;
 
+	public string iName = null;
+
 	string url = "http://3.89.35.102/";
 
 	void Start ()
@@ -33,10 +35,12 @@ public class WinScreen : MonoBehaviour {
 	{
 		
 	}
-
+	
 	public void Submit()
 	{
-		if(string.IsNullOrEmpty(Input.text) == false)
+		iName =Input.text;
+		
+		if(string.IsNullOrEmpty(iName) == false)
 		{
 			/*
 			pkg data = new pkg
@@ -53,10 +57,16 @@ public class WinScreen : MonoBehaviour {
 			form.AddField("x",json);
 			WWW send = new WWW (url,form);
 			*/
-			gameObject.GetComponent<sendJson>().sendInfoToServer(Input.text, record.text, "0", SceneManager.GetActiveScene().name);
+			gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);
+			Debug.Log(iName);
 
 			Close();
 		}
+		else
+		{
+			Debug.Log("Didn't work");
+		}
+		
 	}
 
 	private class pkg
