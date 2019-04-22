@@ -12,7 +12,7 @@ public class PlayerData : MonoBehaviour {
 
 	public string L1Time, L2Time, L3Time;
 
-	public PlayerData (Player player)
+	public PlayerData (PlayerInfo player)
 	{
 		curLevel = player.curLevel;
 		email = player.email;

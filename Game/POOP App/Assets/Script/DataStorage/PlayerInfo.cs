@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class PlayerInfo : MonoBehaviour {
 
 	public int curLevel;
 
@@ -10,6 +10,12 @@ public class Player : MonoBehaviour {
 
 	public string L1Time, L2Time, L3Time;
 
+	public void Saving(string time, string Lvl)
+	{
+		LoadPlayer();
+		updateTime(time, Lvl);
+		SavePlayer();
+	}
 	public void SavePlayer()
 	{
 		SaveState.SavePlayer(this);
@@ -29,6 +35,8 @@ public class Player : MonoBehaviour {
 
 	public void updateTime(string time, string Lvl)
 	{
+		Debug.Log("Updating...");
+
 		string myTime = "";
 		switch(Lvl)
 		{

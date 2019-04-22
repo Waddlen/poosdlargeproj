@@ -13,7 +13,7 @@ public class WinScreen : MonoBehaviour {
 
 	public GameObject Popup;
 
-	public string iName = null;
+	private string iName = null;
 
 	string url = "http://3.89.35.102/";
 
@@ -28,6 +28,7 @@ public class WinScreen : MonoBehaviour {
 		{
 			t.GetComponent<Text>().text = record.text;
 		}
+		updateData(record.text, SceneManager.GetActiveScene().name);
 	}
 	
 	// Update is called once per frame
@@ -78,5 +79,10 @@ public class WinScreen : MonoBehaviour {
 	public void Close()
 	{
 		Popup.SetActive(false);
+	}
+
+	public void updateData(string time, string Lvl)
+	{
+		gameObject.GetComponent<PlayerInfo>().Saving(time, Lvl);
 	}
 }
