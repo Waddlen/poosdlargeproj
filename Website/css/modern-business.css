@@ -16,14 +16,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-.table-style{
-    align: left;
-    valign: middle;
-    margin: auto;
-    border-collapse: separate;
-    border-spacing: 80px 0;
-}
 
 .portfolio-item {
-  margin-bottom: 30px; 
+  margin-bottom: 30px;
 }
