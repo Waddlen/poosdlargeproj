@@ -20,6 +20,7 @@ body {
     align: left;
     valign: middle;
     margin: auto;
+    border: 1px solid blue;
 }
 
 .portfolio-item {
