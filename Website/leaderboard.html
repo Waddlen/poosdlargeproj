@@ -20,6 +20,10 @@
 
 <body>
 
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -51,12 +55,21 @@
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Global Leaderboard</h1>
 
+    <select id="level_id" class="form-control">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
 
-    <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
-
-
-
+    <script type="text/javascript">
+      $('#level_id').on('click',function()
+      {
+        alert($(this).val());
+        console.log($(this).val());
+      });
+    </script>
   </div>
   <!-- /.container -->
 
@@ -67,10 +80,6 @@
     </div>
     <!-- /.container -->
   </footer>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
