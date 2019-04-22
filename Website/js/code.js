@@ -47,7 +47,6 @@ function getPosts()
                 var table = document.getElementById(boardName);
                 
                 var new_tbody = document.createElement('tbody');
-                populate_with_new_rows(new_tbody);
                 $(table).find('tbody').parentNode.replaceChild(new_tbody, $(table).find('tbody'));
                 
                 if (str.includes("No Records Found"))
