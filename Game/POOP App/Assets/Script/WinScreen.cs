@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System.IO;
 
 public class WinScreen : MonoBehaviour {
@@ -37,6 +38,7 @@ public class WinScreen : MonoBehaviour {
 	{
 		if(string.IsNullOrEmpty(Input.text) == false)
 		{
+			/*
 			pkg data = new pkg
 			{
 				name = Input.text,
@@ -50,6 +52,9 @@ public class WinScreen : MonoBehaviour {
 			WWWForm form = new WWWForm();
 			form.AddField("x",json);
 			WWW send = new WWW (url,form);
+			*/
+			gameObject.GetComponent<sendJson>().sendInfoToServer(Input.text, record.text, "0", SceneManager.GetActiveScene().name);
+
 			Close();
 		}
 	}
