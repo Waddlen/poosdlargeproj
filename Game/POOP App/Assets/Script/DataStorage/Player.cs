@@ -8,8 +8,6 @@ public class Player : MonoBehaviour {
 
 	public string email, id;
 
-	public string L1Time, L2Time, L3Time;
-
 	public void SavePlayer()
 	{
 		SaveState.SavePlayer(this);
@@ -22,9 +20,6 @@ public class Player : MonoBehaviour {
 		curLevel = data.curLevel;
 		email = data.email;
 		id = data.id;
-		L1Time = data.L1Time;
-		L1Time = data.L2Time;
-		L1Time = data.L3Time;
 	}
 
 	public void updateTime(string time, string Lvl)
