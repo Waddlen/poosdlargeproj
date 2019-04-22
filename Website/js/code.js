@@ -89,3 +89,8 @@ function getPosts()
         alert("BIG ERROR BRO");
     }
 }
+.table-style{
+    align: left;
+    valign: middle;
+    margin: auto;
+}
