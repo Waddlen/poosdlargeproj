@@ -51,7 +51,7 @@ function getPosts()
 
                 if (str.includes("No Records Found"))
                 {
-                    $(table).find('tbody').append( "<tr><td>NO SCORES FOUND</td></tr>" );
+                    $(table).find('tbody').append( "<tr><td>NO SCORES FOUND</td><td></td><td></td></tr>" );
                     //var newScore = table.createTHead();
                     //var newScoreInfo = newScore.insertRow(0);
                     //newContactInfo.scope = "row";
