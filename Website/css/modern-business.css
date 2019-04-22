@@ -16,6 +16,10 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
+.table-style{
+    align: left;
+    valign: middle;
+}
 
 .portfolio-item {
   margin-bottom: 30px;
