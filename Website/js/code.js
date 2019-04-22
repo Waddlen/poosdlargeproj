@@ -52,7 +52,6 @@ function getPosts()
                     newContactInfo.scope = "row";
                     newContactIndo.insertCell(0).outerHTML = '<th scope="col">No matching contacts found</th>';
                 }
-                var pages = Math.ceil(jsonObject.results.length / 10);
                 for (var i = 0; i < jsonObject.results.length; i++)
                 {
                     var jsonObjectTwo = jsonObject.results[i];
@@ -68,6 +67,7 @@ function getPosts()
                         newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+jsonObjectTwo.Time+"</th>";
                     }
                 }
+                table.classList.add('table-style');
             }
         };
         xhr.send(jsonPayload);
