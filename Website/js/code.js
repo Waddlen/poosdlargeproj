@@ -48,7 +48,7 @@ function getPosts()
 //                 table.deleteTHead();
                 var new_tbody = document.createElement('tbody');
                 populate_with_new_rows(new_tbody);
-                table.parentNode.replaceChild(new_tbody, old_tbody)
+                table.parentNode.replaceChild(new_tbody, old_tbody);
                 if (str.includes("No Records Found"))
                 {
                     $(table).find('tbody').append( "<tr><td>"NO SCORES FOUND"</td></tr>" );
