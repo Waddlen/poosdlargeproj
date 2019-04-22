@@ -62,11 +62,10 @@ function getPosts()
                                 var newScore = table.createTHead();
                                 var newScoreInfo = newScore.insertRow(0);
                                 newScoreInfo.scope = "row";
-//                                 newScoreInfo.value = "1";
+                                newScoreInfo.value = "1";
                                 newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+(jsonObject.results.length-i)+"</th>";
                                 newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+jsonObjectTwo.Nickname+"</th>";
                                 newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+jsonObjectTwo.Time+"</th>";
-                                newScoreInfo.classList.add('table-style');
                             }
                         }
                         var newScore = table.createTHead();
