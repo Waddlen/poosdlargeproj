@@ -20,7 +20,8 @@ body {
     align: left;
     valign: middle;
     margin: auto;
-    border: 1px solid blue;
+    border-collapse: separate;
+    border-spacing: 80px 0;
 }
 
 .portfolio-item {
