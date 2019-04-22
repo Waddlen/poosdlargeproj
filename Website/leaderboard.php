@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
   <meta charset="utf-8">
@@ -51,10 +50,38 @@
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Global Leaderboard</h1>
 
+    <table class="striped">
+    <tr class="header">
+        <td>device_id</td>
+        <td>level_id</td>
+        <td>time</td>
+    </tr>
+    <?php
+      $conn = new mysqli("poosdlarge.ckbkojoxq1y0.us-east-1.rds.amazonaws.com", "poosdadmin", "DontForgetThis321", "poosdlarge");
 
-    <!-- Image Header -->
-    <img class="img-fluid rounded mb-4" src="http://placehold.it/1200x300" alt="">
+      if ($conn->connect_error)
+    	{
+    		returnWithError( $conn->connect_error );
+    	}
+    	else
+    	{
+        $sql = "SELECT * FROM `leaderboard`";
 
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0)
+		    {
+          while($row = $result->fetch_assoc())
+			    {
+            echo "<td>".$row[device_id]."</td>";
+            echo "<td>".$row[level_id]."</td>";
+            echo "<td>".$row[time]."</td>";
+            echo "</tr>";
+          }
+        }
+      }
+    ?>
+</table>
 
 
   </div>
