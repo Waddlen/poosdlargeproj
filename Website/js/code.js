@@ -59,8 +59,8 @@ function getPosts()
                         newScoreInfo.scope="row";
                         newScoreInfo.value="1";
                         newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+"#"+"</th>";
-                        newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+"Nickname"+</th>";
-                        newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+"Score"+</th>";
+                        newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+"Nickname"+"</th>";
+                        newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+"Score"+"</th>";
                         
                         for (var i = 0; i < jsonObject.results.length; i++)
                         {
