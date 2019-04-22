@@ -45,7 +45,7 @@ function getPosts()
                 var jsonObject = JSON.parse(str);
                 //var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
                 var table = document.getElementById(boardName);
-                table.deleteTHead();
+                table.innerHTML="";
                 if (str.includes("No Records Found"))
                 {
                     $(table).find('tbody').append( "<tr><td>NO SCORES FOUND</td></tr>" );
