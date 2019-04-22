@@ -19,7 +19,7 @@
 	else
 	{
 		//$sql = "SELECT ContactName from Contact where ContactName like '%" . $search . "%'";
-		$sql = "SELECT * FROM leaderboard WHERE level_id=$search" ORDER BY time;
+		$sql = "SELECT * FROM leaderboard WHERE level_id=$search ORDER BY time";
 		$result = $conn->query($sql);
 		if ($result->num_rows > 0)
 		{
