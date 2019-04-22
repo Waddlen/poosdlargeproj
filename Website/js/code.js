@@ -1,7 +1,7 @@
 var menuName = "level_id";
 var boardName = "scoreList";
 
-/*  add to leaderboard.html: 
+/*  add to leaderboard.html:
         - make small changes to text
         - add a drop-down menu for selecting level
         - add a frame for the leaderboard posts
@@ -26,7 +26,7 @@ function hideOrShow (elementId, showState)
     document.getElementById(elementId).style.display=dis;
 }
 
-function getPosts() 
+function getPosts()
 {
     var search = document.getElementById(menuName).value;
     var xhr = new XMLHttpRequest();
@@ -40,17 +40,18 @@ function getPosts()
         {
             if (this.readyState == 4 && this.status == 200)
             {
-                hideOrShow(boardName,true);
+                //hideOrShow(boardName,true);
                 var str = xhr.responseText;
                 var jsonObject = JSON.parse(str);
+                //var tableRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
                 var table = document.getElementById(boardName);
-                table.deleteTHead();
+                //table.deleteTHead();
                 if (str.includes("No Records Found"))
                 {
-                    var newScore = table.createTHead();
-                    var newScoreInfo = newScore.insertRow(0);
-                    newContactInfo.scope = "row";
-                    newContactInfo.insertCell(0).outerHTML = '<th scope="col">No matching contacts found</th>';
+                    //var newScore = table.createTHead();
+                    //var newScoreInfo = newScore.insertRow(0);
+                    //newContactInfo.scope = "row";
+                    //newContactInfo.insertCell(0).outerHTML = '<th scope="col">No matching contacts found</th>';
                 }
                 else {
                         for (var i = 0; i < jsonObject.results.length; i++)
@@ -59,22 +60,23 @@ function getPosts()
                             var error = jsonObjectTwo.error;
                             if (error == "")
                             {
-                                var newScore = table.createTHead();
-                                var newScoreInfo = newScore.insertRow(0);
-                                newScoreInfo.scope = "row";
-                                newScoreInfo.value = "1";
-                                newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+(jsonObject.results.length-i)+"</th>";
-                                newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+jsonObjectTwo.Nickname+"</th>";
-                                newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+jsonObjectTwo.Time+"</th>";
+                                $(table).find('tbody').append( "<tr><td>"+(i+1)+"</td><td>"+jsonObjectTwo.Nickname+"</td><td>"+jsonObjectTwo.Time+"</td></tr>" );
+                                //var newScore = table.createTHead();
+                                //var newScoreInfo = newScore.insertRow(0);
+                                //newScoreInfo.scope = "row";
+                                //newScoreInfo.value = "1";
+                                //newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+(jsonObject.results.length-i)+"</th>";
+                                //newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+jsonObjectTwo.Nickname+"</th>";
+                                //newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+jsonObjectTwo.Time+"</th>";
                             }
                         }
-                        var newScore = table.createTHead();
-                        var newScoreInfo = newScore.insertRow(0);
-                        newScoreInfo.scope="row";
-                        newScoreInfo.value="1";
-                        newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+"#"+"</th>";
-                        newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+"Nickname"+"</th>";
-                        newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+"Score"+"</th>";
+                        // var newScore = table.createTHead();
+                        // var newScoreInfo = newScore.insertRow(0);
+                        // newScoreInfo.scope="row";
+                        // newScoreInfo.value="1";
+                        // newScoreInfo.insertCell(0).outerHTML = '<th scope="col">'+"#"+"</th>";
+                        // newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+"Nickname"+"</th>";
+                        // newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+"Score"+"</th>";
                 }
                 table.setAttribute("class", "table-style");
             }
