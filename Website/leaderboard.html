@@ -23,7 +23,7 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <body onload="getPosts(1)">
+  <body onload="getPosts()">
 
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -67,7 +67,7 @@
     <script type="text/javascript">
       $('#level_id').on('click',function()
       {
-        getPosts($(this).val());
+        getPosts();
         // alert($(this).val());
         // console.log($(this).val());
       });
