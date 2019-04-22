@@ -19,6 +19,7 @@ body {
 .table-style{
     align: left;
     valign: middle;
+    margin: auto;
 }
 
 .portfolio-item {
