@@ -53,7 +53,7 @@ function getPosts()
                     newContactIndo.insertCell(0).outerHTML = '<th scope="col">No matching contacts found</th>';
                 }
                 var pages = Math.ceil(jsonObject.results.length / 10);
-                for (var i = curPage*10; i < jsonObject.results.length; i++)
+                for (var i = 0; i < jsonObject.results.length; i++)
                 {
                     var jsonObjectTwo = jsonObject.results[i];
                     var error = jsonObjectTwo.error;
