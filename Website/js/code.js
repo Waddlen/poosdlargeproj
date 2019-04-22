@@ -77,7 +77,7 @@ function getPosts()
                         newScoreInfo.insertCell(1).outerHTML = '<th scope="col">'+"Nickname"+"</th>";
                         newScoreInfo.insertCell(2).outerHTML = '<th scope="col">'+"Score"+"</th>";
                 }
-                table.setAttribute("class", "table-striped");
+                table.setAttribute("class", "table-style");
             }
         };
         xhr.send(jsonPayload);
