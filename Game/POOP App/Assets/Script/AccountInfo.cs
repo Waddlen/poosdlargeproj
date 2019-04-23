@@ -25,7 +25,7 @@ public class AccountInfo : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void CreateAccount()
+	public void CreateAccount()
 	{
 			ScreenUI.SetActive(true);
 			MenuButtons.SetActive(false);
