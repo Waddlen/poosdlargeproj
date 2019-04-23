@@ -56,13 +56,20 @@
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Global Leaderboard</h1>
 
-    <select id="level_id" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
+    <div class="row">
+      <div class="col-lg-6">
+        <select id="level_id" class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+      <div class="col-lg-6">
+        Select the level to display the corresponding high scores.
+      </div>
+    </div>
 
     <script type="text/javascript">
       $('#level_id').on('click',function()
