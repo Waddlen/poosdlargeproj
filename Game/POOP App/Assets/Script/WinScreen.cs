@@ -31,7 +31,6 @@ public class WinScreen : MonoBehaviour {
 		// updateData(record.text, SceneManager.GetActiveScene().name);
 		string id = PlayerPrefs.GetString("deviceID");
 		string nick = PlayerPrefs.GetString("nickName");
-<<<<<<< HEAD
 		string level = System.Convert.ToString(SceneManager.GetActiveScene().buildIndex - 1);
 		string yourTime = GetTime(record.text);
 		Debug.Log(id);
@@ -39,12 +38,6 @@ public class WinScreen : MonoBehaviour {
 		gameObject.GetComponent<sendJson>().sendUsernameToServer(id,nick);
 		//gameObject.GetComponent<sendJson>().sendInfoToServer(id, record.text, "0", SceneManager.GetActiveScene().name);
 		gameObject.GetComponent<sendJson>().sendInfoToServer(id, yourTime, "0", level);		
-=======
-		Debug.Log(id);
-		Debug.Log(nick);
-		gameObject.GetComponent<sendJson>().sendUsernameToServer(id,nick);
-		gameObject.GetComponent<sendJson>().sendInfoToServer(id, record.text, "0", SceneManager.GetActiveScene().name);		
->>>>>>> parent of 58785f0... Merge branch 'master' of https://github.com/Xicronic/poosdlargeproj
 	}
 	
 	// Update is called once per frame
