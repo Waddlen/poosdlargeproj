@@ -70,12 +70,8 @@ public class sendJson : MonoBehaviour {
 		}
 	}
 
-<<<<<<< HEAD
-	public void sendUsernameToServer(string deviceId, string username) {
-=======
 	// Sends a username and deviceId pair to the server
 	public void sendUsernameToServer(string deviceId, string nickname) {
->>>>>>> parent of 58785f0... Merge branch 'master' of https://github.com/Xicronic/poosdlargeproj
 
 		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/SetNickname.php");
 		httpWebRequest.ContentType = "application/json";
