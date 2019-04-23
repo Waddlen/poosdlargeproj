@@ -101,15 +101,9 @@ public class WinScreen : MonoBehaviour {
 
 	public void updateData(string time, string Lvl)
 	{
-<<<<<<< HEAD
 		//gameObject.GetComponent<PlayerInfo>().latestLvl = Lvl;
 		//gameObject.GetComponent<PlayerInfo>().latestTime = time;
 		//gameObject.GetComponent<PlayerInfo>().Saving();
-=======
-		gameObject.GetComponent<PlayerInfo>().latestLvl = Lvl;
-		gameObject.GetComponent<PlayerInfo>().latestTime = time;
-		gameObject.GetComponent<PlayerInfo>().Saving();
->>>>>>> parent of 58785f0... Merge branch 'master' of https://github.com/Xicronic/poosdlargeproj
 	}
 }
 
