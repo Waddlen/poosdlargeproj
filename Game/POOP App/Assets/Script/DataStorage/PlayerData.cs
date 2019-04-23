@@ -10,10 +10,15 @@ public class PlayerData : MonoBehaviour {
 
 	public string email, id;
 
-	public PlayerData (Player player)
+	public string L1Time, L2Time, L3Time;
+
+	public PlayerData (PlayerInfo player)
 	{
 		curLevel = player.curLevel;
 		email = player.email;
 		id = player.id;
+		L1Time = player.L1Time;
+		L1Time = player.L2Time;
+		L1Time = player.L3Time;
 	}
 }
