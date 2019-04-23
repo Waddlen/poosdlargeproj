@@ -96,7 +96,7 @@ public class sendJson : MonoBehaviour {
 		}
 	}
 
-	void sendUsernameToServer(string deviceId, string username) {
+	public void sendUsernameToServer(string deviceId, string username) {
 
 		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/AddScore.php");
 		httpWebRequest.ContentType = "application/json";

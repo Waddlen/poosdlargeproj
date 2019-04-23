@@ -13,14 +13,14 @@ public class WinScreen : MonoBehaviour {
 
 	public GameObject Popup;
 
-	public string iName = null;
+	private string iName = null;
 
 	string url = "http://3.89.35.102/";
 
 	void Start ()
 	{
-		//GameObject.FindGameObjectWithTag("Player").GetComponent<ShowTime>().record = record;
-		Popup.SetActive(true);
+		//Popup.SetActive(true);
+		
 
 
 		GameObject[] Timers = GameObject.FindGameObjectsWithTag("Timer");
@@ -28,6 +28,16 @@ public class WinScreen : MonoBehaviour {
 		{
 			t.GetComponent<Text>().text = record.text;
 		}
+		// updateData(record.text, SceneManager.GetActiveScene().name);
+		string id = PlayerPrefs.GetString("deviceID");
+		string nick = PlayerPrefs.GetString("nickName");
+		string level = System.Convert.ToString(SceneManager.GetActiveScene().buildIndex - 1);
+		string yourTime = GetTime(record.text);
+		Debug.Log(id);
+		Debug.Log(nick);
+		gameObject.GetComponent<sendJson>().sendUsernameToServer(id,nick);
+		//gameObject.GetComponent<sendJson>().sendInfoToServer(id, record.text, "0", SceneManager.GetActiveScene().name);
+		gameObject.GetComponent<sendJson>().sendInfoToServer(id, yourTime, "0", level);		
 	}
 	
 	// Update is called once per frame
@@ -35,10 +45,18 @@ public class WinScreen : MonoBehaviour {
 	{
 		
 	}
+
+	string GetTime(string t)
+	{
+		string[] token = t.Split(':');
+		float seconds = int.Parse(token[0]) * 60f;
+		seconds += float.Parse(token[1]);
+		return System.Convert.ToString(seconds);
+	}
 	
 	public void Submit()
 	{
-		iName =Input.text;
+		iName = Input.text;
 		
 		if(string.IsNullOrEmpty(iName) == false)
 		{
@@ -57,8 +75,9 @@ public class WinScreen : MonoBehaviour {
 			form.AddField("x",json);
 			WWW send = new WWW (url,form);
 			*/
+
 			gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);
-			Debug.Log(iName);
+			Debug.Log("iName = " + iName + ", record.text = " + record.text + "activeScene = " + SceneManager.GetActiveScene().name);
 
 			Close();
 		}
@@ -79,4 +98,12 @@ public class WinScreen : MonoBehaviour {
 	{
 		Popup.SetActive(false);
 	}
+
+	public void updateData(string time, string Lvl)
+	{
+		//gameObject.GetComponent<PlayerInfo>().latestLvl = Lvl;
+		//gameObject.GetComponent<PlayerInfo>().latestTime = time;
+		//gameObject.GetComponent<PlayerInfo>().Saving();
+	}
 }
+
