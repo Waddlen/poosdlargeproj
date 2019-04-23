@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -59,8 +60,14 @@ public class WinScreen : MonoBehaviour {
 			WWW send = new WWW (url,form);
 			*/
 
-			gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);
-			Debug.Log("iName = " + iName + ", record.text = " + record.text + "activeScene = " + SceneManager.GetActiveScene().name);
+			// Convert time to double
+			string time = timeToDouble(record.text);
+
+			// Convert level name to integer but slicing off the "Level" string
+			string levelInt = SceneManager.GetActiveScene().name.Substring(5);
+
+			Debug.Log("time = " + time + ", levelInt = " + levelInt);
+			gameObject.GetComponent<sendJson>().sendInfoToServer(iName, time, "0", levelInt);
 
 			Close();
 		}
@@ -69,6 +76,25 @@ public class WinScreen : MonoBehaviour {
 			Debug.Log("Didn't work");
 		}
 		
+	}
+
+	// Converts time format of e.g. 0:23.29 to a double
+	string timeToDouble(string timeText) {
+
+		char[] delimiterChars = { ':', '.' };
+		string[] splitStrings = timeText.Split(delimiterChars);
+
+		double time = 0;
+		double x;
+
+		Double.TryParse(splitStrings[0], out x);
+		time += x * 60;	// Minutes
+		Double.TryParse(splitStrings[1], out x);
+		time += x;		// Seconds
+		Double.TryParse(splitStrings[2], out x);
+		time += x / 100; // Hundredths of seconds
+
+		return time.ToString("F4");
 	}
 
 	private class pkg
