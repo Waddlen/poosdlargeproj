@@ -4,18 +4,24 @@ using UnityEngine;
 
 public class PlayerInfo : MonoBehaviour {
 
-	public int curLevel;
+	public int curLevel = 1;
 
-	public string email, id;
+	public string email = "yourname@gmail.com", id = "yourname";
 
-	public string L1Time, L2Time, L3Time;
+	public string L1Time = null, L2Time = null, L3Time = null;
 
-	public void Saving(string time, string Lvl)
+	public string latestTime = "";
+
+	public string latestLvl = "";
+
+	public void Saving()
 	{
+		//Debug.Log(latestLvl);
 		LoadPlayer();
-		updateTime(time, Lvl);
+		updateTime(latestTime, latestLvl);
 		SavePlayer();
 	}
+	
 	public void SavePlayer()
 	{
 		SaveState.SavePlayer(this);
@@ -24,20 +30,26 @@ public class PlayerInfo : MonoBehaviour {
 	public void LoadPlayer()
 	{
 		PlayerData data = SaveState.LoadPlayer();
-
-		curLevel = data.curLevel;
-		email = data.email;
-		id = data.id;
-		L1Time = data.L1Time;
-		L1Time = data.L2Time;
-		L1Time = data.L3Time;
+		if(data != null)
+		{
+			curLevel = data.curLevel;
+			email = data.email;
+			id = data.id;
+			L1Time = data.L1Time;
+			L1Time = data.L2Time;
+			L1Time = data.L3Time;
+		}
+		else
+		{
+			Debug.Log("No Data Found");
+		}
 	}
 
 	public void updateTime(string time, string Lvl)
 	{
 		Debug.Log("Updating...");
 
-		string myTime = "";
+		string myTime = null;
 		switch(Lvl)
 		{
 			case "Level1":
@@ -54,7 +66,7 @@ public class PlayerInfo : MonoBehaviour {
 		}
 
 		float curTime = 0f;
-		if(!myTime.Equals("0"))
+		if(string.IsNullOrEmpty(myTime) == false)
 		{
 			curTime = ToFloat(myTime);
 		}
@@ -107,7 +119,14 @@ public class PlayerInfo : MonoBehaviour {
 
 	float ToFloat(string str)
 	{
+		//Debug.Log(str);
 		string[] token = str.Split(':');
+		/*
+		foreach(string t in token)
+		{
+			Debug.Log(t);
+		}
+		*/
 		float val = (float.Parse(token[0]) * 60) + float.Parse(token[1]);
 		return val;
 	}

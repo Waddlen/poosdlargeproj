@@ -83,6 +83,8 @@ public class WinScreen : MonoBehaviour {
 
 	public void updateData(string time, string Lvl)
 	{
-		gameObject.GetComponent<PlayerInfo>().Saving(time, Lvl);
+		gameObject.GetComponent<PlayerInfo>().latestLvl = Lvl;
+		gameObject.GetComponent<PlayerInfo>().latestTime = time;
+		gameObject.GetComponent<PlayerInfo>().Saving();
 	}
 }
