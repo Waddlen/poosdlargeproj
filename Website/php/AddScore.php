@@ -12,7 +12,7 @@
 	}
 	else
 	{
-		$sql = "INSERT INTO leaderboard (device_id,level_id,time,score) VALUES ('" . $device_id . "','" . $level_id . "','" . $time . "','" . $score . "') ON DUPLICATE KEY UPDATE time= IF(VALUES(time) < time,'" . $time . "',time) RETURNING *";
+		$sql = "INSERT INTO leaderboard (device_id,level_id,time,score) VALUES ('" . $device_id . "','" . $level_id . "','" . $time . "','" . $score . "') ON DUPLICATE KEY UPDATE time= IF(VALUES(time) < time,'" . $time . "',time)";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
