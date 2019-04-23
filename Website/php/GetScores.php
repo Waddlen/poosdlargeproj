@@ -46,7 +46,7 @@
                 		}
                 		else
                 		{
-                    			returnWithError( $search,$Device_ID,"No Records Found (device_id)" );
+                    			returnWithError( "No Records Found (device_id)" );
                 		}
 			}
 			returnWithInfo( $searchResults );
@@ -64,9 +64,9 @@
 		header('Content-type: application/json');
 		echo $obj;
 	}
-	function returnWithError( $s, $d, $err )
+	function returnWithError( $err )
 	{
-		$retValue = '{"level_id":"' . $s . '","device_id":"' . $d . '","error":"' . $err . '"}';
+		$retValue = '{"level_id":"' . $search . '","device_id":"' . $device_ID . '","error":"' . $err . '"}';
 		sendResultInfoAsJson( $retValue );
 	}
 	function returnWithInfo( $searchResults )
