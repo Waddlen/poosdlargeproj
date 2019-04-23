@@ -46,7 +46,7 @@
                 		}
                 		else
                 		{
-                    			returnWithError( "'. $search .'","'. $Device_ID .'","No Records Found (device_id)" );
+                    			returnWithError( $search,$Device_ID,"No Records Found (device_id)" );
                 		}
 			}
 			returnWithInfo( $searchResults );
