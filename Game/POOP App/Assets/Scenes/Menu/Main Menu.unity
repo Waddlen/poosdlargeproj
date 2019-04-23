@@ -566,6 +566,7 @@ GameObject:
   - component: {fileID: 239858845}
   - component: {fileID: 239858847}
   - component: {fileID: 239858846}
+  - component: {fileID: 239858848}
   m_Layer: 0
   m_Name: blocks
   m_TagString: Untagged
@@ -620,7 +621,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 447f27e30e3314f5d87af76300650090, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -633,6 +634,19 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &239858847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239858844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60ffd3c0ee1e042c09431634eba9d1e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatSpeed: 2
+  floatRadius: 0.3
+--- !u!114 &239858848
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1326,9 +1340,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8cc5b7dab3afd540b7bf6be2bd89a3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuButtons: {fileID: 189556629}
-  ScreenUI: {fileID: 670924775}
-  user: {fileID: 658916120}
 --- !u!1001 &985832303
 Prefab:
   m_ObjectHideFlags: 0
