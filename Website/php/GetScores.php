@@ -29,14 +29,14 @@
 				{
 					$searchResults .= ",";
 				}
-	
+
 				//level_id device_id nickname time
 				$searchCount++;
                 		$Device_ID = $row["device_id"];
-                		$sql2 = "SELECT * FROM usernames WHERE device_id=$Device_ID";
+                		$sql2 = "SELECT * FROM usernames WHERE device_id='" . $Device_ID . "'";
                 		$result2 = $conn->query($sql2);
 
-                		if ($result2->num_rows > 0) 
+                		if ($result2->num_rows > 0)
                 		{
                     			$row2 = $result2->fetch_assoc();
                     			$Nickname = $row2["nickname"];
@@ -58,7 +58,7 @@
 		}
 		$conn->close();
 	}
-	
+
 	function sendResultInfoAsJson( $obj )
 	{
 		header('Content-type: application/json');
