@@ -16,7 +16,7 @@ DESTINATION: http://3.89.35.102/php/AddScore.php
 
 OUTPUT:
 
-- IF VALID: {"error":"", "score_id":"$NEW_SCORE_ID"}
+- IF VALID: {"error":"", "time":"$GARBAGE"}
 
 - IF INVALID: {"error":"$ERROR_MESSAGE"}
 ```
