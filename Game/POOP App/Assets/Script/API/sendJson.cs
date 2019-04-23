@@ -7,7 +7,6 @@ using UnityEngine;
 public class sendJson : MonoBehaviour {
 
 	public bool sendRequest = false;
-	public bool changeUsername = false;
 
 	// Use this for initialization
 	void Start () {
@@ -16,22 +15,58 @@ public class sendJson : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+		// level id
+		// device id
+		// time
+		// score
+
 
 		if (sendRequest) {
-			Debug.Log ("sendInfoToServer gonna be called...");
-			sendRequest = false;
 			sendInfoToServer("test_deviceId", "test_time", "test_score", "test_levelId" );
+			sendRequest = false;
 		}
 		
-		if (changeUsername) {
-			Debug.Log ("sendUsernameToServer gonna be called...");
-			changeUsername = false;
-			sendUsernameToServer("test_deviceId", "test_nickname");
-		}
 	}
 
+	// IEnumerator WaitForWWW(WWW www) {
+	// 	yield return www;
+		
+		
+	// 	string txt = "";
+	// 	if (string.IsNullOrEmpty(www.error))
+	// 		txt = www.text;  //text of success
+	// 	else
+	// 		txt = www.error;  //error
+	// 	GameObject.Find("Txtdemo").GetComponent<Text>().text =  "++++++\n\n" + txt;
+	// }
 
-	// This sends the data to the server
+	// void TaskOnClick()
+	// {
+	// 	try
+	// 	{
+	// 		GameObject.Find("Txtdemo").GetComponent<Text>().text = "starting..";   
+
+	// 		string ourPostData = "{\"plan\":\"TESTA02\"";
+	// 		Dictionary<string,string> headers = new Dictionary<string, string>();
+	// 		headers.Add("Content-Type", "application/json");
+			
+	// 		//byte[] b = System.Text.Encoding.UTF8.GetBytes();
+	// 		byte[] pData = System.Text.Encoding.ASCII.GetBytes(ourPostData.ToCharArray());
+
+	// 		///POST by IIS hosting...
+	// 		WWW api = new WWW("http://192.168.1.120/si_aoi/api/total", pData, headers);
+
+	// 		///GET by IIS hosting...
+	// 		///WWW api = new WWW("http://192.168.1.120/si_aoi/api/total?dynamix={\"plan\":\"TESTA02\"");
+
+	// 		StartCoroutine(WaitForWWW(api));
+	// 	}
+	// 	catch (UnityException ex) { Debug.Log(ex.Message); }
+	// }
+
+
+
 	public void sendInfoToServer(string deviceId, string time, string score, string levelId) {
 
 		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/AddScore.php");
@@ -41,19 +76,10 @@ public class sendJson : MonoBehaviour {
 
 		using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
 		{
-			string json = "{\"device_id\":\"" + deviceId + "\"," + 	// device_id
-						"\"time\":\"" + time + "\"," +			// time
-						"\"score\":\"" + score + "\"," +		// score
-						"\"level_id\":\"" + levelId + "\"}";	// level_id
-
-
-			// Test stuff 
-			/* 
 			string json = "{\"device_id\":\"test\"," + 	// device_id
 						"\"time\":\"test\"," +			// time
 						"\"score\":\"test\"," +			// score
 						"\"level_id\":\"test\"}"; 		// level_id
-			*/
 
 			streamWriter.Write(json);
 			streamWriter.Flush();
@@ -70,24 +96,23 @@ public class sendJson : MonoBehaviour {
 		}
 	}
 
-	// Sends a username and deviceId pair to the server
-	public void sendUsernameToServer(string deviceId, string nickname) {
+	void sendUsernameToServer(string deviceId, string username) {
 
-		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/SetNickname.php");
+		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/AddScore.php");
 		httpWebRequest.ContentType = "application/json";
 		httpWebRequest.Method = "POST";
 		httpWebRequest.Credentials = new System.Net.NetworkCredential("poosdadmin", "DontForgetThis321");
 
 		using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
 		{
-			string json = "{\"device_id\":\"" + deviceId + "\"," + 	// device_id
-						"\"nickname\":\"" + nickname + "\"}";		// username
+			string json = "{\"device_id\":\"test\"," + 	// device_id
+						"\"time\":\"test\"," +			// time
+						"\"score\":\"test\"," +			// score
+						"\"level_id\":\"test\"}"; 		// level_id
 
 			streamWriter.Write(json);
 			streamWriter.Flush();
 			streamWriter.Close();
-
-			Debug.Log("json = " + json);
 		}
 
 		var httpResponse = (HttpWebResponse)httpWebRequest.GetResponse();

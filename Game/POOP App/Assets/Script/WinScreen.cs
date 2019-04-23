@@ -13,14 +13,14 @@ public class WinScreen : MonoBehaviour {
 
 	public GameObject Popup;
 
-	private string iName = null;
+	public string iName = null;
 
 	string url = "http://3.89.35.102/";
 
 	void Start ()
 	{
-		//Popup.SetActive(true);
-		
+		//GameObject.FindGameObjectWithTag("Player").GetComponent<ShowTime>().record = record;
+		Popup.SetActive(true);
 
 
 		GameObject[] Timers = GameObject.FindGameObjectsWithTag("Timer");
@@ -28,13 +28,6 @@ public class WinScreen : MonoBehaviour {
 		{
 			t.GetComponent<Text>().text = record.text;
 		}
-		// updateData(record.text, SceneManager.GetActiveScene().name);
-		string id = PlayerPrefs.GetString("deviceID");
-		string nick = PlayerPrefs.GetString("nickName");
-		Debug.Log(id);
-		Debug.Log(nick);
-		gameObject.GetComponent<sendJson>().sendUsernameToServer(id,nick);
-		gameObject.GetComponent<sendJson>().sendInfoToServer(id, record.text, "0", SceneManager.GetActiveScene().name);		
 	}
 	
 	// Update is called once per frame
@@ -45,7 +38,7 @@ public class WinScreen : MonoBehaviour {
 	
 	public void Submit()
 	{
-		iName = Input.text;
+		iName =Input.text;
 		
 		if(string.IsNullOrEmpty(iName) == false)
 		{
@@ -64,9 +57,8 @@ public class WinScreen : MonoBehaviour {
 			form.AddField("x",json);
 			WWW send = new WWW (url,form);
 			*/
-
 			gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);
-			Debug.Log("iName = " + iName + ", record.text = " + record.text + "activeScene = " + SceneManager.GetActiveScene().name);
+			Debug.Log(iName);
 
 			Close();
 		}
@@ -86,12 +78,5 @@ public class WinScreen : MonoBehaviour {
 	public void Close()
 	{
 		Popup.SetActive(false);
-	}
-
-	public void updateData(string time, string Lvl)
-	{
-		gameObject.GetComponent<PlayerInfo>().latestLvl = Lvl;
-		gameObject.GetComponent<PlayerInfo>().latestTime = time;
-		gameObject.GetComponent<PlayerInfo>().Saving();
 	}
 }
