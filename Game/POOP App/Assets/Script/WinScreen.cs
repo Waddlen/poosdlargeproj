@@ -13,8 +13,6 @@ public class WinScreen : MonoBehaviour {
 
 	public GameObject Popup;
 
-	private string iName = null;
-
 	string url = "http://3.89.35.102/";
 
 	void Start ()
@@ -29,9 +27,12 @@ public class WinScreen : MonoBehaviour {
 			t.GetComponent<Text>().text = record.text;
 		}
 		// updateData(record.text, SceneManager.GetActiveScene().name);
-		iName = PlayerPrefs.GetString("deviceID");
-		Debug.Log(iName);
-		gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);		
+		string id = PlayerPrefs.GetString("deviceID");
+		string nick = PlayerPrefs.GetString("nickName");
+		Debug.Log(id);
+		Debug.Log(nick);
+		gameObject.GetComponent<sendJson>().sendUsernameToServer(id,nick);
+		gameObject.GetComponent<sendJson>().sendInfoToServer(id, record.text, "0", SceneManager.GetActiveScene().name);		
 	}
 	
 	// Update is called once per frame

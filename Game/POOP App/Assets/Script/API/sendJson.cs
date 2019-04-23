@@ -71,7 +71,7 @@ public class sendJson : MonoBehaviour {
 	}
 
 	// Sends a username and deviceId pair to the server
-	void sendUsernameToServer(string deviceId, string nickname) {
+	public void sendUsernameToServer(string deviceId, string nickname) {
 
 		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/SetNickname.php");
 		httpWebRequest.ContentType = "application/json";
