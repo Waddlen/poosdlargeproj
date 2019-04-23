@@ -2424,6 +2424,16 @@ Prefab:
       propertyPath: DetectPlayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 212348086160976216, guid: 933610260665bf9469ca1dc73730fabc,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -1213920087
+      objectReference: {fileID: 0}
+    - target: {fileID: 212348086160976216, guid: 933610260665bf9469ca1dc73730fabc,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 933610260665bf9469ca1dc73730fabc, type: 2}
   m_IsPrefabAsset: 0
@@ -3249,7 +3259,7 @@ Prefab:
     - target: {fileID: 114944066692220380, guid: 2ee12f3376ad36248909365ce2e1a79a,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: loadNextLevel
+      value: loadLevelSelect
       objectReference: {fileID: 0}
     - target: {fileID: 114972016573068286, guid: 2ee12f3376ad36248909365ce2e1a79a,
         type: 2}

@@ -355,6 +355,16 @@ Prefab:
       propertyPath: UI
       value: 
       objectReference: {fileID: 801801079}
+    - target: {fileID: 212162233636808108, guid: 837d7c38a33034c48b6eb930029f88e5,
+        type: 2}
+      propertyPath: m_SortingLayerID
+      value: -2101493159
+      objectReference: {fileID: 0}
+    - target: {fileID: 212162233636808108, guid: 837d7c38a33034c48b6eb930029f88e5,
+        type: 2}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114464894422150790, guid: 837d7c38a33034c48b6eb930029f88e5, type: 2}
     - {fileID: 114356900451984294, guid: 837d7c38a33034c48b6eb930029f88e5, type: 2}
