@@ -12,7 +12,7 @@
 	}
 	else
 	{
-		$sql = "INSERT INTO leaderboard (score_id,device_id,level_id,time,score) VALUES (DEFAULT,'" . $device_id . "','" . $level_id . "','" . $time . "','" . $score . "')";
+		$sql = "INSERT INTO leaderboard (device_id,level_id,time,score) VALUES ('" . $device_id . "','" . $level_id . "','" . $time . "','" . $score . "') ON DUPLICATE KEY UPDATE time='" . $time . "'";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
