@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class LevelMenuControlScript : MonoBehaviour {
-	public Button level2, level3;
+	public Button level2, level3, level4;
 	int levelPassed;
     //private GUISkin skin;
 
