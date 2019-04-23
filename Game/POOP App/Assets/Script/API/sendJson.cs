@@ -29,44 +29,8 @@ public class sendJson : MonoBehaviour {
 		
 	}
 
-	// IEnumerator WaitForWWW(WWW www) {
-	// 	yield return www;
-		
-		
-	// 	string txt = "";
-	// 	if (string.IsNullOrEmpty(www.error))
-	// 		txt = www.text;  //text of success
-	// 	else
-	// 		txt = www.error;  //error
-	// 	GameObject.Find("Txtdemo").GetComponent<Text>().text =  "++++++\n\n" + txt;
-	// }
 
-	// void TaskOnClick()
-	// {
-	// 	try
-	// 	{
-	// 		GameObject.Find("Txtdemo").GetComponent<Text>().text = "starting..";   
-
-	// 		string ourPostData = "{\"plan\":\"TESTA02\"";
-	// 		Dictionary<string,string> headers = new Dictionary<string, string>();
-	// 		headers.Add("Content-Type", "application/json");
-			
-	// 		//byte[] b = System.Text.Encoding.UTF8.GetBytes();
-	// 		byte[] pData = System.Text.Encoding.ASCII.GetBytes(ourPostData.ToCharArray());
-
-	// 		///POST by IIS hosting...
-	// 		WWW api = new WWW("http://192.168.1.120/si_aoi/api/total", pData, headers);
-
-	// 		///GET by IIS hosting...
-	// 		///WWW api = new WWW("http://192.168.1.120/si_aoi/api/total?dynamix={\"plan\":\"TESTA02\"");
-
-	// 		StartCoroutine(WaitForWWW(api));
-	// 	}
-	// 	catch (UnityException ex) { Debug.Log(ex.Message); }
-	// }
-
-
-
+	// This sends the data to the server
 	public void sendInfoToServer(string deviceId, string time, string score, string levelId) {
 
 		var httpWebRequest = (HttpWebRequest)WebRequest.Create("http://3.89.35.102/php/AddScore.php");
@@ -76,10 +40,19 @@ public class sendJson : MonoBehaviour {
 
 		using (var streamWriter = new StreamWriter(httpWebRequest.GetRequestStream()))
 		{
+			string json = "{\"device_id\":\"" + deviceId + "\"," + 	// device_id
+						"\"time\":\"" + time + "\"," +			// time
+						"\"score\":\"" + score + "\"," +		// score
+						"\"level_id\":\"" + levelId + "\"}";	// level_id
+
+
+			// Test stuff 
+			/* 
 			string json = "{\"device_id\":\"test\"," + 	// device_id
 						"\"time\":\"test\"," +			// time
 						"\"score\":\"test\"," +			// score
 						"\"level_id\":\"test\"}"; 		// level_id
+			*/
 
 			streamWriter.Write(json);
 			streamWriter.Flush();

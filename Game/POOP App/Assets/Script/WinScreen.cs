@@ -28,7 +28,7 @@ public class WinScreen : MonoBehaviour {
 		{
 			t.GetComponent<Text>().text = record.text;
 		}
-		updateData(record.text, SceneManager.GetActiveScene().name);
+		// updateData(record.text, SceneManager.GetActiveScene().name);
 	}
 	
 	// Update is called once per frame
@@ -39,7 +39,7 @@ public class WinScreen : MonoBehaviour {
 	
 	public void Submit()
 	{
-		iName =Input.text;
+		iName = Input.text;
 		
 		if(string.IsNullOrEmpty(iName) == false)
 		{
@@ -58,8 +58,9 @@ public class WinScreen : MonoBehaviour {
 			form.AddField("x",json);
 			WWW send = new WWW (url,form);
 			*/
+
 			gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);
-			Debug.Log(iName);
+			Debug.Log("iName = " + iName + ", record.text = " + record.text + "activeScene = " + SceneManager.GetActiveScene().name);
 
 			Close();
 		}
