@@ -19,13 +19,13 @@
 		}
 		else
 		{
-
+			/*
 			if ($result->num_rows > 0)
 			{
 				$row2 = $result->fetch_assoc();
 				$time = $row2["time"];
 			}
-
+			*/
 			$new_score_id = $conn->insert_id;
 			$conn->close();
 			$message = '{"error":"", "time":"' . $time . '"}';
