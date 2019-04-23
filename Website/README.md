@@ -3,7 +3,6 @@ SSH info in the Discord #web-people
 
 View the website live at http://3.89.35.102 - tries to update every 10 seconds, barring some `git push --force` disaster
 
-More info TBD
 
 # API EXAMPLES
 The .PHP files take JSON input. I'm going to denote variables as $VAR. Here are some examples of using curl to pass JSON to the site:
