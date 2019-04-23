@@ -19,8 +19,8 @@ public class WinScreen : MonoBehaviour {
 
 	void Start ()
 	{
-		//GameObject.FindGameObjectWithTag("Player").GetComponent<ShowTime>().record = record;
-		Popup.SetActive(true);
+		//Popup.SetActive(true);
+		
 
 
 		GameObject[] Timers = GameObject.FindGameObjectsWithTag("Timer");
@@ -29,6 +29,9 @@ public class WinScreen : MonoBehaviour {
 			t.GetComponent<Text>().text = record.text;
 		}
 		// updateData(record.text, SceneManager.GetActiveScene().name);
+		iName = PlayerPrefs.GetString("deviceID");
+		Debug.Log(iName);
+		gameObject.GetComponent<sendJson>().sendInfoToServer(iName, record.text, "0", SceneManager.GetActiveScene().name);		
 	}
 	
 	// Update is called once per frame
