@@ -10,7 +10,7 @@
 	}
 	else
 	{
-		$sql = "INSERT INTO usernames (device_id, nickname) VALUES ('" . $device_id . "','" . $nickname . "') ON DUPLICATE KEY UPDATE nickname='" . $device_id . "'";
+		$sql = "INSERT INTO usernames (device_id, nickname) VALUES ('" . $device_id . "','" . $nickname . "') ON DUPLICATE KEY UPDATE nickname='" . $nickname . "'";
 		if( $result = $conn->query($sql) != TRUE )
 		{
 			returnWithError( $conn->error );
@@ -19,7 +19,7 @@
 		{
 			$new_nickname = $conn->insert_id;
 			$conn->close();
-			$message = '{"error":"", "dunno":"' . $new_nickname . '"}';
+			$message = '{"error":"", "nickname":"' . $nickname . '"}';
 			sendResultInfoAsJson($message);
 		}
 	}
