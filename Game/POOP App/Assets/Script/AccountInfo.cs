@@ -10,7 +10,13 @@ public class AccountInfo : MonoBehaviour {
 
 	public GameObject ScreenUI;
 
+	public GameObject ChangeButton;
+
+	public GameObject ChangeScreen;
+
 	public InputField user;
+
+	public InputField user2;
 
 	// Use this for initialization
 	void Start ()
@@ -21,6 +27,10 @@ public class AccountInfo : MonoBehaviour {
 		{
 			//Create Account
 			CreateAccount();
+		}
+		else
+		{
+			ChangeButton.SetActive(true);
 		}
 	}
 	
@@ -53,5 +63,17 @@ public class AccountInfo : MonoBehaviour {
                  +"-"+string.Format("{0:X}", System.DateTime.Now.ToLongTimeString())                                            //Device    
                  +"-"+string.Format("{0:X}", random.Next(1000000000));
 		return id;
+	}
+
+	public void EnterChange()
+	{
+		nickName = user2.text;
+		PlayerPrefs.SetString("nickName", nickName);
+		Close();
+	}
+
+	public void Close()
+	{
+		ChangeScreen.SetActive(false);
 	}
 }
