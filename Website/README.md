@@ -42,3 +42,21 @@ curl --header "Content-Type: application/json" \
   --data '{"device_id":"143","nickname":"tester"}' \
   http://3.89.35.102/php/SetNickname.php
   ```
+  
+  ## TEST: GET LEVEL SCORES
+
+INPUT: Search
+
+DESTINATION: http://3.89.35.102/php/GetScores.php
+
+OUTPUT:
+
+- IF VALID: {"results":[{"Nickname":"Jojo","Time":"24.12","error":""},{"Nickname":"Pro Gamer","Time":"25.92","error":""},{"Nickname":"Not As Pro Gamer","Time":"26.1","error":""},{"Nickname":"testingM1","Time":"47.78","error":""}],"error":""}
+
+- IF INVALID: {"level_id":"$level_id","device_id":"$device_id","error":"$ERROR_MESSAGE"}
+```
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"Search":"3"}' \
+  http://3.89.35.102/php/GetScores.php
+```
