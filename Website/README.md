@@ -1,4 +1,4 @@
 # Website
-SSH info in the Discord
+You can examine the Website files, as well as API information, in the "Website" branch
 
-More info TBD (such as the leaderboard API)
+SSH info in the Discord
