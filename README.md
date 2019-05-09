@@ -1,5 +1,19 @@
-# poosdlargeproj
-This project simulates your presentation to potential investors. You will use a PowerPoint presentation, but you will not do a demo of any part of your project. You will work in a group of groups of 7 or 8. You will select your group, they are not assigned. Sign up https://docs.google.com/spreadsheets/d/1PhJ7Cw2X-fh5iJhuWb0SElX6jZHXwcn6usFvU5g3xTQ/edit#gid=0 (Links to an external site.)Links to an external site.
+# Processes of Object Oriented Software Development, Large Project
+In this class project, we created an Android app and complementary website. Our app was a simple puzzle game, and the website showcased screenshots, provided an .apk download, hosted a global leaderboard, and had embedded IRC and email functionality.
+
+## Screenshots of the website:
+![Home](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/pic1.jpg)
+![About Us](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/pic2.jpg)
+![Leaderboard](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/pic3.jpg)
+![Contact](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/pic4.jpg)
+## Screenshots of the Android app:
+![Main Menu](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/apppic1.jpg)
+![Level Select](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/apppic2.jpg)
+![Level 1](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/apppic3.jpg)
+![Finished Level Screen](https://raw.githubusercontent.com/Xicronic/poosdlargeproj/master/Website/apppic4.jpg)
+## Here is the description from the assignment turn-in:
+
+This project simulates your presentation to potential investors. You will use a PowerPoint presentation, but you will not do a demo of any part of your project. You will work in a group of groups of 7 or 8. You will select your group, they are not assigned.
 
 The presentations will be 15 minutes. Immediately in advance of your presentation you DO NOT have time to go the google drive, drop box, or the like and retrieve your material. You should have your slides and support material on a USB stick. All members must participate in the presentation.
 
@@ -10,12 +24,7 @@ The user interface should be clean and professional. The project should be as pr
 Deliverables:
 Zipped PowerPoint presentation -- (all members must submit)
 
-
-First, make sure you put your names into the spreadsheet https://docs.google.com/spreadsheets/d/1PhJ7Cw2X-fh5iJhuWb0SElX6jZHXwcn6usFvU5g3xTQ/edit#gid=0 (Links to an external site.)Links to an external site.
-
-You will get a zero if you miss your team's presentation without prior approval of the instructor.
-
-This is the rubric for the final presentation (but does not indicate a required order)
+First, make sure you put your names into the spreadsheet. You will get a zero if you miss your team's presentation without prior approval of the instructor. This is the rubric for the final presentation (but does not indicate a required order)
 
 1. Submission of PowerPoint slides to the Webcourse - 10 pts
 
